@@ -117,3 +117,23 @@
 **Rationale:** The GTM strategy and addendum both specify tiered pricing that lets Seed-stage companies start small and upgrade as needs grow. This mirrors competitors like Jirav (transparent pricing tiers) and Pilot (starting at a few hundred/month for bookkeeping, scaling up). ROI framing: "We save your controller 20+ hours per month and improve accuracy; at your scale, our $3K fee is a fraction of that."
 
 **Implications:** Design partners receive a significant discount (e.g., half-price for the first 3 months). Published pricing should emphasize ROI, not cost. Enterprise tier is not actively sold until the Starter workflow is proven.
+
+---
+
+## DEC-013: Design partner pilot priced at $1,500/month
+
+**Decision:** The 90-day design partner pilot is priced at $1,500/month — 50% discount from the Starter tier ($3K–$4K/month).
+
+**Rationale:** $1,500/month is low enough to remove budget friction for Seed–Series B companies while still qualifying serious intent. The discount is justified by the design partner exchange: weekly feedback calls and permission to develop an anonymized case study. The price must be non-zero to filter for companies with real pain, and high enough that the engagement is taken seriously by both sides.
+
+**Implications:** Pilot pricing is explicit in the pilot package. No negotiation below $1,500. No free pilots — the "free board memo" offer is a one-time sample, not an ongoing service. After 90 days, continuation is at standard Starter pricing.
+
+---
+
+## DEC-014: Pilot operations are manual-first with defined automation targets
+
+**Decision:** The first pilot uses manual or semi-automated processes at every stage. Automation targets are defined per stage but are not prerequisites for pilot launch.
+
+**Rationale:** Waiting to build full automation before onboarding the first design partner would delay market learning by months. Manual execution with documented processes allows the pilot to launch in 2 weeks while generating the real-world data needed to prioritize automation investments. The 48-hour SLA is achievable with manual processes for a single customer.
+
+**Implications:** Founder/operator bandwidth is the binding constraint during the first pilot. No more than 1–2 design partners can be supported simultaneously with manual processes. Automation priorities are driven by actual time-per-stage measurements from live cycles, not theoretical estimates.

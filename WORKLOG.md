@@ -1,5 +1,29 @@
 # Work Log
 
+## 2026-03-12 — Polish proof assets and define pilot workflow (TICKET-003)
+
+**What was done:**
+
+Deliverable Group A — Polished proof assets:
+- Upgraded sample variance memo to v2 (`deliverables/sample_variance_memo_v2.md`): added Signal column to topline table, Recurring? column to expense tables, structured risks/watchouts and recommended actions as tables with Exposure/Trigger/Owner/By columns, expanded data provenance with COA template hash and "How to read this section" explainer
+- Created PDF format notes (`deliverables/sample_variance_memo_format_notes_v1.md`): page setup, font specs, color palette (navy headers, green favorable, red unfavorable), section hierarchy, table formatting rules, visual design priorities, conversion tool options
+- Upgraded pilot package to v2 (`gtm/pilot_package_v2.md`): specific $1,500/month pilot pricing (50% discount from Starter), customer inputs as structured table, phased timeline table, explicit DPA mention, success criteria with targets, clearer exclusions
+- Upgraded demo narrative to v2 (`gtm/demo_narrative_v2.md`): Version A (5-min live call) organized by screen/section with specific talk tracks, Version B (3-min async recorded walkthrough) with recording tips, 7 objection handlers, pre/post-demo checklists
+
+Deliverable Group B — Live pilot workflow:
+- Created `ops/live_pilot_workflow_v1.md`: 7-stage workflow (Upload → Validate → Map → Analyze → Draft → Review → Approve → Deliver) with defined inputs, outputs, pass/fail criteria, failure handling, and responsible parties per stage. Includes end-to-end SLA table, manual vs. automated split matrix, failure/exception handling table, pilot readiness checklist (must-have/should-have/nice-to-have), and cycle-over-cycle improvement plan.
+
+Deliverable Group C — Gaps and build priorities:
+- Created `ops/pilot_gaps_and_build_priorities_v1.md`: readiness assessment across 14 areas. Priority 1 items (must build before pilot): validation scripts, variance computation scripts, AI narrative workflow, COA mapping process, secure file upload, finance QA reviewer, DPA, PDF conversion. Priority 2 (before Cycle 1): communication templates, SLA tracking, feedback process, backup reviewer. Priority 3 (during/after pilot): automated pipeline, reviewer UI, portal approval, integrations. 7 risk items with mitigations. 2-week pre-pilot sprint plan.
+
+**Key decisions made:**
+- DEC-013: Design partner pilot priced at $1,500/month (50% discount from Starter)
+- DEC-014: Pilot operations are manual-first with defined automation targets
+
+**Outcome:** E-Solutions now has external-ready proof assets (v2 memo, pilot package, demo narrative), a complete operational playbook for pilot delivery, and a prioritized build list for the pre-pilot sprint. The next step is executing the 2-week pre-pilot sprint (validation scripts, computation scripts, AI narrative workflow, PDF conversion, reviewer contracting, DPA) in parallel with building the ICP shortlist and starting outreach.
+
+---
+
 ## 2026-03-12 — Create first proof-asset package (TICKET-002)
 
 **What was done:**
