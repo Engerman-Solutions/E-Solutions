@@ -1,0 +1,19 @@
+account_code,account_name,category,actual_amount,budget_amount,prior_period_amount,period
+4100,SaaS Subscription Revenue,Revenue,412800.00,395000.00,378200.00,2026-02
+4200,Professional Services Revenue,Revenue,38500.00,45000.00,41200.00,2026-02
+4300,Usage-Based Revenue,Revenue,22100.00,18000.00,16800.00,2026-02
+5100,Cloud Infrastructure (AWS),COGS,52300.00,48000.00,47100.00,2026-02
+5200,Third-Party API Costs,COGS,8900.00,7500.00,7200.00,2026-02
+5300,Customer Support Team,COGS,28500.00,30000.00,28500.00,2026-02
+6100,Engineering Salaries,Operating Expenses,142000.00,148000.00,142000.00,2026-02
+6110,Engineering Contractors,Operating Expenses,18500.00,12000.00,9500.00,2026-02
+6200,Sales & Marketing Salaries,Operating Expenses,68000.00,68000.00,62000.00,2026-02
+6210,Paid Advertising,Operating Expenses,15200.00,20000.00,18700.00,2026-02
+6220,Events & Sponsorships,Operating Expenses,4800.00,3000.00,1200.00,2026-02
+6300,G&A Salaries,Operating Expenses,52000.00,52000.00,52000.00,2026-02
+6310,Legal & Professional Fees,Operating Expenses,11200.00,6000.00,5800.00,2026-02
+6320,Software & Tools,Operating Expenses,14300.00,13000.00,12800.00,2026-02
+6330,Office & Facilities,Operating Expenses,8200.00,8500.00,8200.00,2026-02
+6340,Insurance,Operating Expenses,3100.00,3000.00,3000.00,2026-02
+6400,Travel & Entertainment,Operating Expenses,6700.00,5000.00,3900.00,2026-02
+6500,Recruiting & Hiring,Operating Expenses,8400.00,4000.00,2100.00,2026-02

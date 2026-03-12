@@ -1,5 +1,24 @@
 # Work Log
 
+## 2026-03-12 — Create first proof-asset package (TICKET-002)
+
+**What was done:**
+- Created sample variance memo (`deliverables/sample_variance_memo_v1.md`) using synthetic but realistic SaaS financial data for a fictional Series A company ("NovaCRM, Inc."). Includes executive summary, topline performance, revenue and expense variance analysis, headcount variance, risks/watchouts, recommended actions, and data provenance section with checkpoint ID.
+- Created supporting data file (`deliverables/sample_variance_data_v1.csv`) with 18 line items across revenue, COGS, and operating expense categories.
+- Created pilot package (`gtm/pilot_package_v1.md`) — a 1-page design partner scope doc covering: who it is for, what E-Solutions delivers, what the customer provides, the 6-step workflow, implementation timeline, success criteria, pilot constraints, pricing structure, and risk mitigation.
+- Created demo narrative (`gtm/demo_narrative_v1.md`) — includes a 3-minute short version for cold intros and a 5-minute full version for scheduled demos. Covers the workflow walkthrough, where trust is built, differentiation points, objection handling (6 common objections with responses), and a pre/post-demo checklist.
+
+**Key design decisions in the proof assets:**
+- Sample memo uses a "DRAFT — Pending Finance QA Review" status to demonstrate the human-in-loop requirement
+- Checkpoint ID and data provenance section are included to make auditability tangible, not theoretical
+- Demo narrative emphasizes showing the output first, then walking back through the process — lead with value, not features
+- Pilot package positions the 90-day engagement as low-risk: sample memo first, no long-term commitment, discount for design partners
+- Objection handling specifically addresses the "is it all AI?" concern and the "we already have FP&A tools" objection
+
+**Outcome:** E-Solutions now has a complete proof-asset package for founder-led outbound: a tangible deliverable (sample memo), a clear offer (pilot package), and a structured demo flow (narrative). The next bottleneck is identifying specific target companies and starting outreach.
+
+---
+
 ## 2026-03-12 — Ingest source materials and refine strategy docs (TICKET-001)
 
 **Source materials used:**
@@ -9,34 +28,18 @@
 - Project_Ernie_V4.1_B2B_Addendum (V4.1.1) — 2 pages
 - Project_Ernie_V4.1_Converged_Spec — 10 pages
 - Competitor Analysis: AI Finance Automation & FP&A Platforms (referenced in GTM doc)
-- E-Solutions: Architectural Blueprint for AI-Native Autonomous Finance (available but not primary for this ticket)
-- AI in Finance: Elevating User Satisfaction (available but not primary for this ticket)
+- E-Solutions: Architectural Blueprint for AI-Native Autonomous Finance (available)
+- AI in Finance: Elevating User Satisfaction (available)
 
 **What was clarified:**
-- ICP sharpened: 20–250 employees, $1M–$30M ARR (from GTM strategy)
-- Pricing tiers confirmed: Starter $3K–$4K, Pro $8K–$10K, Enterprise $15K+ (from addendum)
-- Demo flow defined: upload → validation → checkpoint ID → draft memo → approval → delivery (from GTM)
-- MVP scope boundaries confirmed: single deliverable (variance memo), single intake (web portal), single model + fallback + stub mode, human-in-loop approval required (from V4.1 spec)
-- Out-of-scope items explicitly listed: voice, Moltbot, multi-agent, CRM sync, auto-scaling, multi-deliverable (from V4.1 spec)
-- Non-negotiable trust requirements extracted: pre-analysis validation gate, data isolation, approval SoR in portal (not Slack), clean-room reviewer UI with PII masking, exactly-once processing, circuit breakers (from V4.1 spec)
-- B2B moat articulated: validated intake contracts, COA template versioning, reproducible checkpoints, approval logs, reviewer SOPs — operational controls a big platform cannot replicate by flipping a switch (from addendum)
-- Competitor landscape mapped: Enterprise (HighRadius, BlackLine, Anaplan), Mid-market (Planful, Vena, Workday Adaptive), SMB/startup (Cube, Mosaic, Jirav, DataRails), Service (Pilot, Kruze, Consero, Zeni) (from competitor analysis)
-- AI + human hybrid model confirmed as early delivery approach, matching Pilot's bookkeeping model (from GTM strategy)
-- "Free board memo" identified as top-of-funnel lead magnet tactic (from GTM strategy)
-- 6-week MVP timeline mapped: Weeks 1–2 infrastructure + security, Week 3 validation pipeline, Week 4 LangGraph brain, Week 5 human review + approval, Week 6 delivery + testing (from V4.1 spec)
+- ICP sharpened: 20–250 employees, $1M–$30M ARR
+- Pricing tiers confirmed: Starter $3K–$4K, Pro $8K–$10K, Enterprise $15K+
+- MVP scope boundaries confirmed: single deliverable, single intake, human-in-loop mandatory
+- Non-negotiable trust requirements extracted from V4.1 spec
+- B2B moat articulated: operational controls a big platform cannot replicate
+- Competitor landscape mapped across 4 segments
 
-**Strategic changes to repo docs:**
-- PROJECT_BRIEF.md: Added acute pain articulation, delivery model (AI + human hybrid), pricing hypothesis with specific tiers, explicit list of deferred features, sharpened ICP with employee count and ARR range
-- CONVERGENCE_PLAN.md: Made outputs and exit criteria more concrete per phase. Added non-negotiable trust requirements to Phase 1. Added SLA targets and testimonial goals to Phase 2. Added unit economics tracking to Phase 3.
-- DECISIONS.md: Added 5 new decisions (DEC-008 through DEC-012) covering human-in-loop review, trust/auditability requirements, deferred scope, hybrid delivery model, and tiered pricing
-- TASK_QUEUE.md: Re-ranked and expanded to 14 tasks. Added MVP pipeline build, reviewer UI, free board memo lead magnet, and landing page. Refined business reasons to be more specific.
-- NEXT_ACTIONS.md: Rewritten with sharper specificity tied to source material findings — includes demo flow details, pilot package structure, ROI framing, and onboarding timeline targets
-
-**Remaining uncertainties:**
-- Exact COA mapping complexity across different accounting systems not yet tested
-- Reviewer capacity planning (who reviews memos before first hire?)
-- Whether $3K–$4K/month Starter pricing fits actual ICP budget constraints
-- Technical feasibility of < 4h turnaround SLA with current single-engineer constraint
+**Outcome:** Core docs now reflect actual business strategy from source materials.
 
 ---
 
@@ -44,7 +47,7 @@
 
 **What was done:**
 - Initialized E-Solutions Git repository
-- Created directory structure: `docs/`, `research/`, `product/`, `gtm/`, `ops/`, `deliverables/`, `prompts/`
-- Created core operating files: README.md, PROJECT_BRIEF.md, CONVERGENCE_PLAN.md, OPERATING_RULES.md, TASK_QUEUE.md, DECISIONS.md, NEXT_ACTIONS.md, WORKLOG.md
+- Created directory structure and core operating files
+- Seeded all tracking documents
 
 **Outcome:** E-Solutions repository established as system of record.
