@@ -1,0 +1,19 @@
+source_account_code,source_account_name,normalized_category,memo_section,variance_group,notes
+4100,SaaS Subscription Revenue,Revenue,Revenue Variance Detail,Subscription Revenue,Primary recurring revenue line
+4200,Professional Services Revenue,Revenue,Revenue Variance Detail,Professional Services,Implementation and consulting revenue
+4300,Usage-Based Revenue,Revenue,Revenue Variance Detail,Usage Revenue,API and consumption-based revenue
+5100,Cloud Infrastructure (AWS),COGS,Expense Variance Detail — COGS,Infrastructure,Primary hosting and compute costs
+5200,Third-Party API Costs,COGS,Expense Variance Detail — COGS,Variable COGS,Costs correlated with usage revenue
+5300,Customer Support Team,COGS,Expense Variance Detail — COGS,Support,Customer-facing support headcount
+6100,Engineering Salaries,Operating Expenses,Expense Variance Detail — OpEx,Engineering,Full-time engineering compensation
+6110,Engineering Contractors,Operating Expenses,Expense Variance Detail — OpEx,Engineering,Contract and temporary engineering
+6200,Sales & Marketing Salaries,Operating Expenses,Expense Variance Detail — OpEx,Sales & Marketing,Full-time S&M compensation
+6210,Paid Advertising,Operating Expenses,Expense Variance Detail — OpEx,Sales & Marketing,Digital and traditional advertising spend
+6220,Events & Sponsorships,Operating Expenses,Expense Variance Detail — OpEx,Sales & Marketing,Event participation and sponsorship costs
+6300,G&A Salaries,Operating Expenses,Expense Variance Detail — OpEx,G&A,General and administrative compensation
+6310,Legal & Professional Fees,Operating Expenses,Expense Variance Detail — OpEx,G&A,Legal counsel and professional services
+6320,Software & Tools,Operating Expenses,Expense Variance Detail — OpEx,G&A,SaaS subscriptions and internal tools
+6330,Office & Facilities,Operating Expenses,Expense Variance Detail — OpEx,G&A,Rent and office-related costs
+6340,Insurance,Operating Expenses,Expense Variance Detail — OpEx,G&A,Business insurance premiums
+6400,Travel & Entertainment,Operating Expenses,Expense Variance Detail — OpEx,T&E,Business travel and client entertainment
+6500,Recruiting & Hiring,Operating Expenses,Expense Variance Detail — OpEx,People Ops,Agency fees and hiring costs

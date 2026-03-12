@@ -1,5 +1,36 @@
 # Work Log
 
+## 2026-03-12 — Pre-pilot sprint Week 1: infrastructure foundations (TICKET-004)
+
+**What was done:**
+
+Deliverable Group A — Validation layer:
+- Created `product/validation_spec_v1.md`: 10 validation checks (file format, schema, data types, period, category, completeness, sign/reasonableness, duplicate rows, injection scan, file hash). Defines blocking errors vs. non-blocking warnings. Specifies JSON output format.
+- Created `product/validation_checks_v1.py`: working Python script implementing all 10 checks. Tested against `deliverables/sample_variance_data_v1.csv` — 18 rows, 0 errors, 0 warnings, status PASS. Supports CSV and Excel input. CLI with `--period` and `--output` flags.
+
+Deliverable Group B — Variance computation layer:
+- Created `product/variance_computation_spec_v1.md`: defines per-line-item calculations (variance $, variance %, MoM change, materiality flag, signal assignment), topline aggregations (revenue, COGS, gross profit, gross margin, OpEx, operating income), and JSON output format.
+- Created `product/variance_computation_v1.py`: working Python script implementing all calculations. Tested against sample data — output matches the sample variance memo numbers exactly (Total Revenue $473.4K +$15.4K, Operating Income $31.3K +$1.3K). CLI with configurable materiality thresholds, `--output` and `--pretty` flags.
+
+Deliverable Group C — COA mapping:
+- Created `ops/coa_mapping_template_v1.csv`: 18-row template mapping standard SaaS account codes to normalized categories, memo sections, and variance groups. Pre-populated with the NovaCRM sample structure.
+- Created `ops/coa_mapping_process_v1.md`: 4-step mapping process (receive COA, create mapping, customer review, version and store), edge case handling, versioning rules, pilot-specific notes.
+
+Deliverable Group D — Secure file intake:
+- Created `ops/secure_file_intake_plan_v1.md`: recommends Google Drive with per-customer folders for the first pilot. Defines folder structure, access controls (per-customer isolation, 2FA required, email-invitation sharing only), file handling steps, retention/deletion policy, operator responsibilities, and manual-vs-automated comparison. Includes security checklist.
+
+Deliverable Group E — DPA groundwork:
+- Created `ops/dpa_requirements_and_open_questions_v1.md`: identifies 9 minimum required DPA terms (data description, purpose limitation, data isolation, access controls, retention/deletion, security measures, sub-processors, breach notification, term/termination). Documents 6 open questions requiring legal review (AI training exclusion, liability, jurisdiction, audit rights, data residency, regulatory compliance). Includes recommended next steps.
+
+**Infrastructure tested:**
+- Validation script: PASS on sample data (18 rows, 0 errors, 0 warnings)
+- Variance computation: PASS on sample data (numbers match sample memo exactly)
+- Python venv created with pandas and openpyxl dependencies
+
+**Outcome:** E-Solutions now has working validation and variance computation scripts, a COA mapping template and process, a secure file intake plan, and documented DPA requirements. The remaining pre-pilot infrastructure items are: AI narrative generation workflow, PDF conversion testing, QA reviewer contracting, and the actual DPA draft.
+
+---
+
 ## 2026-03-12 — Polish proof assets and define pilot workflow (TICKET-003)
 
 **What was done:**

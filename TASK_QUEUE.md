@@ -9,10 +9,10 @@
 | 6 | Build outreach target list with contacts | P1 | Not started | — | For each ICP company, identify CFO/Founder/Controller contact and warm paths. |
 | 7 | Define onboarding flow for design partners | P1 | Not started | — | Document what happens after "yes": data requirements, COA mapping, access setup, first-cycle timeline. |
 | 8 | Design review/audit workflow and reviewer SOP | P1 | Not started | — | Auditability is a core differentiator. Clean-room review process must be designed before the first pilot memo. |
-| 17 | Pre-pilot sprint: build validation and computation scripts | P0 | Not started | — | Must be operational before first design partner provides real data. See ops/pilot_gaps_and_build_priorities_v1.md Priority 1. |
+| 17 | Pre-pilot sprint: build validation and computation scripts | P0 | Done | — | Must be operational before first design partner provides real data. See ops/pilot_gaps_and_build_priorities_v1.md Priority 1. |
 | 18 | Pre-pilot sprint: AI narrative generation workflow | P0 | Not started | — | Define prompts, model integration, and human editing workflow for variance explanations. |
 | 19 | Contract finance QA reviewer | P0 | Not started | — | Human review is mandatory (DEC-008). No reviewer = no delivery. |
-| 20 | Draft Data Processing Agreement | P0 | Not started | — | Required before any customer provides real financial data. |
+| 20 | Draft Data Processing Agreement | P0 | Requirements defined | — | Required before any customer provides real financial data. DPA requirements doc created; actual DPA draft requires legal counsel. |
 | 21 | Test PDF conversion pipeline | P1 | Not started | — | Convert sample_variance_memo_v2.md to PDF using format_notes_v1.md spec. Verify quality. |
 | 22 | Write customer communication templates | P1 | Not started | — | Upload instructions, validation errors, approval requests, delivery notifications. |
 | 9 | Build MVP variance analysis pipeline | P1 | Not started | — | Core technical workflow: intake → validation → COA mapping → AI analysis → report generation → checkpoint. |
@@ -34,3 +34,4 @@
 | 2 | Define pilot package (1-page scope doc) | 2026-03-12 | TICKET-002: gtm/pilot_package_v1.md |
 | 3 | Build demo narrative and walkthrough | 2026-03-12 | TICKET-002: gtm/demo_narrative_v1.md (short + full versions) |
 | 3.1 | Polish proof assets and define pilot workflow | 2026-03-12 | TICKET-003: v2 memo, format notes, pilot package v2, demo narrative v2, live pilot workflow, gaps/build priorities |
+| 3.2 | Pre-pilot sprint Week 1: infrastructure foundations | 2026-03-12 | TICKET-004: validation scripts, variance computation, COA mapping, secure intake plan, DPA requirements |
