@@ -2,22 +2,22 @@
 
 Priority-ordered. Top of the list = do first.
 
-1. **Create a sample variance memo deliverable** — Build one realistic example memo using anonymized or synthetic data. This is the single most important sales asset. Nothing else moves forward without something to show.
+1. **Create a sample variance memo deliverable.** Build one realistic PDF memo from anonymized SaaS company data (GL export + budget). Include variance analysis by account category, KPI summary, charts, and narrative explanations. This is the single most important sales asset — nothing else moves forward without it.
 
-2. **Define the pilot package** — Write a one-page scope document: what the design partner gets, what they provide (data access, feedback), timeline (2–3 monthly cycles), and cost (free or nominal for design partners).
+2. **Write the pilot package (1-page scope doc).** Define exactly what a design partner gets: monthly variance memo production, < 4h turnaround from validated upload, human QA review, secure portal delivery. What they provide: GL export + budget file monthly, 30-min weekly feedback call, permission for anonymized case study. Timeline: 90 days (3 monthly cycles). Pricing: discounted or free for first 2 design partners.
 
-3. **Refine the ICP shortlist** — Identify 10–20 specific companies that fit the ICP. Prioritize companies in personal/professional network for warm outreach.
+3. **Build the demo narrative.** Write a 5-minute walkthrough script showing the end-to-end flow: upload → validation pass → AI analysis → draft memo with KPIs and charts → reviewer approval → secure delivery. Emphasize the differentiators: auditability (every step checkpointed), speed (hours not days), trust (human review before delivery), and data isolation.
 
-4. **Create the demo narrative** — Write a 5-minute walkthrough script that shows the sample memo, explains the workflow, and makes the value proposition concrete.
+4. **Compile the ICP shortlist.** Identify 10–20 specific Seed–Series B SaaS/services companies with lean finance teams. Prioritize companies in personal/professional network for warm outreach. For each: company name, stage, estimated size, likely finance contact, warm path if any.
 
-5. **Draft outreach messaging** — Write 2–3 email/LinkedIn templates for cold and warm outreach. Focus on the pain point (monthly memo grind) and the offer (free pilot).
+5. **Draft outreach messaging.** Write 2–3 email and LinkedIn templates. Lead with the pain ("How many hours does your team spend on the monthly variance memo?"). Offer the free board memo as a risk-free way to see the value. Position as consultative ("AI-augmented finance consulting") rather than a product pitch.
 
-6. **Build the outreach target list** — For each company on the ICP shortlist, find the CFO/Founder contact info and any warm paths (mutual connections, shared communities).
+6. **Build the outreach target list.** For each company on the ICP shortlist, find specific CFO/Founder/Controller contact info. Identify mutual connections, shared communities (CFO Slack groups, VC portfolio networks), and any warm introduction paths.
 
-7. **Define the onboarding flow** — Document what happens after a design partner says yes: data requirements, access setup, first cycle timeline, feedback mechanism.
+7. **Design the onboarding flow.** Document the step-by-step process: data requirements checklist (GL export format, budget file, COA), access setup, COA mapping, first-cycle walkthrough, feedback mechanism. Target: go-live in 2 weeks from signed agreement.
 
-8. **Define the review/audit workflow** — Specify how memos are reviewed, approved, and versioned. Auditability is a key differentiator — design it before the first pilot.
+8. **Define the review/audit workflow.** Specify the reviewer SOP: what to check (data accuracy, narrative quality, formatting), how to approve (portal-only, not Slack), escalation path, SLA timers. Design the clean-room reviewer UI requirements (PII masked by default, audit logging on every action).
 
-9. **Research the competitive landscape** — Identify 5–10 competitors or adjacent tools. Understand their positioning, pricing, and gaps. Use this to sharpen differentiation.
+9. **Begin building the MVP variance analysis pipeline.** Technical implementation of the core flow: file intake → schema validation → injection scan → COA mapping → variance computation → AI narrative generation → report assembly → checkpoint creation. Start with no-code/low-code where possible (Zapier, Make) and code the critical path (validation logic, AI prompts).
 
-10. **Set a pricing hypothesis** — Define an initial price point or range for paid pilots. Base it on time savings, comparable tools, and early-stage budget realities.
+10. **Set a pricing hypothesis and ROI talking points.** Define Starter tier at $3K–$4K/month. Build 2–3 ROI scenarios: "Your controller spends 15 hours/month on the memo at $X/hour — our fee is a fraction of that time cost, plus you get auditability and consistency you cannot get from spreadsheets."
