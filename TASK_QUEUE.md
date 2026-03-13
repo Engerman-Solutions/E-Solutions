@@ -4,9 +4,9 @@
 
 | # | Task | Priority | Status | Owner | Business reason |
 |---|------|----------|--------|-------|-----------------|
-| 4 | Build ICP shortlist (10–20 target companies) | P0 | Not started | — | Outbound cannot start without specific companies and warm contact paths identified. |
-| 5 | Draft outreach messaging (email + LinkedIn) | P0 | Not started | — | Founder-led outbound requires concise, pain-focused messaging. Include "free board memo" offer as top-of-funnel. |
-| 6 | Build outreach target list with contacts | P1 | Not started | — | For each ICP company, identify CFO/Founder/Controller contact and warm paths. |
+| 4 | Build ICP shortlist (10–20 target companies) | P0 | Done | — | Outbound cannot start without specific companies and warm contact paths identified. |
+| 5 | Draft outreach messaging (email + LinkedIn) | P0 | Done | — | Founder-led outbound requires concise, pain-focused messaging. Include "free board memo" offer as top-of-funnel. |
+| 6 | Build outreach target list with contacts | P1 | Done | — | For each ICP company, identify CFO/Founder/Controller contact and warm paths. |
 | 7 | Define onboarding flow for design partners | P1 | Not started | — | Document what happens after "yes": data requirements, COA mapping, access setup, first-cycle timeline. |
 | 8 | Design review/audit workflow and reviewer SOP | P1 | Not started | — | Auditability is a core differentiator. Clean-room review process must be designed before the first pilot memo. |
 | 17 | Pre-pilot sprint: build validation and computation scripts | P0 | Done | — | Must be operational before first design partner provides real data. See ops/pilot_gaps_and_build_priorities_v1.md Priority 1. |
@@ -38,3 +38,4 @@
 | 3.3 | AI narrative workflow and memo assembly | 2026-03-12 | TICKET-005: narrative spec, prompt templates, I/O schemas, assembly script, operator run instructions, Makefile, end-to-end pipeline test |
 | 3.4 | Wire live AI narrative generation into pipeline | 2026-03-13 | TICKET-006: live generation script, API integration, audit trail, true end-to-end dry run with Claude Sonnet |
 | 3.5 | Build repeatable PDF generation workflow | 2026-03-13 | TICKET-007: WeasyPrint pipeline, CSS stylesheets, generated memo + pilot package + sample memo PDFs |
+| 3.6 | Build ICP shortlist and founder-led outreach pack | 2026-03-13 | TICKET-008: ICP framework, targeting rubric, outreach messaging, call flow, operating rhythm, target list template |

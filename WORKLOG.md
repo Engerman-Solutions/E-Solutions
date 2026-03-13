@@ -1,5 +1,37 @@
 # Work Log
 
+## 2026-03-13 — Build ICP shortlist and founder-led outreach pack (TICKET-008)
+
+**What was done:**
+
+Deliverable Group A — ICP definition and shortlist framework:
+- Created `gtm/icp_shortlist_framework_v1.md`: defines the ideal early customer profile across 8 dimensions (stage, employees, ARR, industry, finance team, accounting system, board reporting, geography). Documents 7 strong-fit indicators, 7 disqualifiers, 5 weak-fit indicators, 7 urgency triggers with explanations, likely pain signals (direct quotes prospects might use), likely objections with interpretations, and a 6-criterion scoring system for determining which prospects warrant personal founder outreach.
+
+Deliverable Group B — Account targeting rubric:
+- Created `gtm/account_targeting_rubric_v1.md`: 10-criteria scoring rubric (0–3 scale per criterion, max 30 points) covering stage, employee count, estimated ARR, finance team size, accounting system, board reporting frequency, buyer accessibility, pain signal strength, design partner potential, and implementation risk. Defines 4 priority tiers: A (25–30, personal outreach), B (18–24, semi-custom), C (12–17, templated), D (<12, deprioritize). Includes scoring shortcuts for incomplete data and a worked example comparing two companies.
+
+Deliverable Group C — Outreach messaging:
+- Created `gtm/founder_outreach_pack_v1.md`: 3 email variants (pain-first for CFO/VP Finance, outcome-first for Founder/CEO, specificity play for Controller/FP&A), 3 LinkedIn DM variants (short and direct, problem-led, referral ask), 2 follow-up variants (Day 4–5 with attachment, Day 10–12 value add), 1 breakup message (Day 20–25), and 7 messaging principles. All messages under word limits (150 for email, 100 for LinkedIn, 75 for follow-ups). No AI hype language — leads with outcomes.
+
+Deliverable Group D — Design partner call flow:
+- Created `gtm/design_partner_call_flow_v1.md`: 30-minute call structure in 5 phases (Open 2 min, Discovery 8 min, Demo 10 min, Qualify 5 min, Close 5 min). Includes 6 primary discovery questions with specific listening cues, a signal interpretation table, demo timing guidance (show memo after discovery, send pilot package after call), 4 qualifying questions, objection quick-reference table, close scripts for 3 outcomes (advance to test run, nurture with follow-up, disqualify gracefully), and a 6-item post-call checklist.
+
+Deliverable Group E — Operating rhythm:
+- Created `gtm/outreach_operating_rhythm_v1.md`: weekly cadence (Monday scoring, Tue–Thu outreach, Friday review; ~3.5 hours/week), weekly targets (8–12 first touches, 5–8 follow-ups, 1–2 calls), reply tracking categories (positive, warm, negative, referral, no reply) with actions, reply rate benchmarks by channel, 4-touch no-reply sequence with timing, feedback logging fields and weekly review questions, monthly pipeline review metrics, pipeline health indicators, escalation rules, and tool recommendations for design partner phase.
+
+Deliverable Group F — Target list template:
+- Created `gtm/target_list_template_v1.csv`: 30-column CSV template covering company info (name, website, industry, stage, employees, ARR, finance team, accounting system), buyer info (name, role, email, LinkedIn, contact channel), scoring (fit score, priority tier, urgency signal), outreach tracking (dates, touch count, sequence status, interest level), next steps, feedback (objections, pricing reaction, feature requests, competitive mentions), call tracking, and notes.
+- Created `gtm/target_list_fields_v1.md`: field definitions with types and examples for all 30 columns, usage instructions (getting started, weekly workflow, status transitions), common filtering views for weekly review, and data hygiene rules.
+
+**Testing:**
+- All 6 deliverables are self-consistent — ICP criteria in the framework match the rubric scoring ranges, outreach messaging references the correct proof assets (sample memo PDF, pilot package PDF), call flow references the demo narrative and pilot package, operating rhythm references the target list and outreach pack, target list columns capture all fields mentioned in the operating rhythm's feedback logging requirements.
+- Messaging aligns with PROJECT_BRIEF.md positioning and demo_narrative_v2.md objection handling.
+- No decisions requiring DECISIONS.md entries — all choices (scoring ranges, outreach cadence, message variants) are tactical implementations of existing strategic decisions (DEC-003 ICP, DEC-004 founder-led outbound, DEC-013 pilot pricing).
+
+**Outcome:** E-Solutions now has a complete founder-led outbound sales toolkit: ICP definition, prospect scoring, ready-to-send messages, a structured call flow, an operating rhythm, and a tracking template. The founder can begin populating the target list and sending first-touch messages immediately. The next step is executing: score 20–30 prospects, populate the target list, and start outreach.
+
+---
+
 ## 2026-03-13 — Build repeatable PDF generation workflow (TICKET-007)
 
 **What was done:**
