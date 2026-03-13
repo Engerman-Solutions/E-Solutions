@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E-Solutions Narrative Generation Input",
+  "description": "Input schema for AI narrative generation. Combines variance computation output with company context.",
+  "type": "object",
+  "required": ["company", "validation", "provenance", "topline", "line_items", "computation_metadata"],
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": ["name", "period_display", "period_code"],
+      "properties": {
+        "name": { "type": "string", "description": "Company name" },
+        "period_display": { "type": "string", "description": "Human-readable period (e.g., 'February 2026')" },
+        "period_code": { "type": "string", "pattern": "^\\d{4}-(0[1-9]|1[0-2])$", "description": "Period in YYYY-MM format" },
+        "stage": { "type": "string", "description": "Company stage (e.g., 'Series A')" },
+        "accounting_system": { "type": "string", "description": "Source accounting system" }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "timestamp": { "type": "string", "format": "date-time" },
+        "row_count": { "type": "integer" },
+        "status": { "type": "string", "enum": ["PASS", "FAIL"] },
+        "errors": { "type": "integer" },
+        "warnings": { "type": "integer" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source_system": { "type": "string" },
+        "gl_export_date": { "type": "string" },
+        "budget_source": { "type": "string" },
+        "prior_period_checkpoint": { "type": ["string", "null"] },
+        "coa_template": { "type": "string" },
+        "coa_template_hash": { "type": "string" },
+        "analysis_engine": { "type": "string" },
+        "checkpoint_id": { "type": "string" }
+      }
+    },
+    "topline": {
+      "type": "object",
+      "description": "Aggregated topline performance from variance computation",
+      "properties": {
+        "total_revenue": { "$ref": "#/$defs/topline_metric" },
+        "total_cogs": { "$ref": "#/$defs/topline_metric" },
+        "gross_profit": { "$ref": "#/$defs/topline_metric" },
+        "gross_margin_pct": {
+          "type": "object",
+          "properties": {
+            "actual": { "type": "number" },
+            "budget": { "type": "number" },
+            "variance_pts": { "type": "number" }
+          }
+        },
+        "total_opex": { "$ref": "#/$defs/topline_metric" },
+        "operating_income": { "$ref": "#/$defs/topline_metric" }
+      }
+    },
+    "line_items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/line_item" }
+    },
+    "computation_metadata": {
+      "type": "object",
+      "properties": {
+        "period": { "type": "string" },
+        "row_count": { "type": "integer" },
+        "material_items": { "type": "integer" },
+        "materiality_threshold_dollars": { "type": "number" },
+        "materiality_threshold_percent": { "type": "number" },
+        "has_prior_period": { "type": "boolean" },
+        "computed_at": { "type": "string" }
+      }
+    },
+    "customer_notes": {
+      "type": ["string", "null"],
+      "description": "Optional context provided by the customer about expected variances"
+    }
+  },
+  "$defs": {
+    "topline_metric": {
+      "type": "object",
+      "properties": {
+        "actual": { "type": "number" },
+        "budget": { "type": "number" },
+        "variance_dollars": { "type": "number" },
+        "variance_percent": { "type": ["number", "null"] },
+        "signal": { "type": "string" },
+        "prior_period": { "type": "number" },
+        "mom_change_dollars": { "type": "number" },
+        "mom_change_percent": { "type": ["number", "null"] }
+      }
+    },
+    "line_item": {
+      "type": "object",
+      "required": ["account_code", "account_name", "category", "actual", "budget", "variance_dollars", "is_material", "signal"],
+      "properties": {
+        "account_code": { "type": "string" },
+        "account_name": { "type": "string" },
+        "category": { "type": "string" },
+        "actual": { "type": "number" },
+        "budget": { "type": "number" },
+        "variance_dollars": { "type": "number" },
+        "variance_percent": { "type": ["number", "null"] },
+        "is_material": { "type": "boolean" },
+        "signal": { "type": "string" },
+        "prior_period": { "type": "number" },
+        "mom_change_dollars": { "type": "number" },
+        "mom_change_percent": { "type": ["number", "null"] }
+      }
+    }
+  }
+}

@@ -137,3 +137,23 @@
 **Rationale:** Waiting to build full automation before onboarding the first design partner would delay market learning by months. Manual execution with documented processes allows the pilot to launch in 2 weeks while generating the real-world data needed to prioritize automation investments. The 48-hour SLA is achievable with manual processes for a single customer.
 
 **Implications:** Founder/operator bandwidth is the binding constraint during the first pilot. No more than 1–2 design partners can be supported simultaneously with manual processes. Automation priorities are driven by actual time-per-stage measurements from live cycles, not theoretical estimates.
+
+---
+
+## DEC-015: Matt is the provisional finance QA reviewer for the pilot
+
+**Decision:** Matt serves as the provisional finance QA reviewer during the pilot. All draft memos pass through Matt's review before delivery.
+
+**Rationale:** Human-in-loop review is mandatory (DEC-008). Rather than delay the pilot for a formal hiring/contracting process, the founder (Matt) performs QA review initially. This is a pilot-stage arrangement — it validates the review workflow and generates firsthand insight into what the reviewer role requires, but it is not a sustainable long-term structure.
+
+**Implications:** Matt's bandwidth is a constraint on delivery velocity. A dedicated reviewer should be contracted before scaling beyond the first design partner. The reviewer checklist and workflow are documented to enable smooth handoff when a dedicated reviewer is onboarded.
+
+---
+
+## DEC-016: AI narrative generation uses Claude Sonnet with structured prompts
+
+**Decision:** The AI narrative generation step uses Claude Sonnet (claude-sonnet-4-6) at temperature 0.3 with structured system and user prompts. Output is JSON conforming to a defined schema. Human editing is expected on every draft.
+
+**Rationale:** Sonnet provides the best balance of quality, speed, and cost for structured financial text. Low temperature ensures factual consistency. Structured JSON output enables deterministic assembly. The prompts enforce numeric faithfulness and prohibit hallucination. Fallback chain: retry → Opus → manual Claude chat → manual writing.
+
+**Implications:** The narrative generation step is AI-assisted, not AI-autonomous. The operator reviews AI output for quality before assembly, and Matt reviews the assembled memo before delivery. Two layers of human oversight on every memo.

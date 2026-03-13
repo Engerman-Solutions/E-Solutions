@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E-Solutions Narrative Generation Output",
+  "description": "Output schema for AI-generated narrative sections of a variance memo.",
+  "type": "object",
+  "required": ["executive_summary", "attention_items", "revenue_narratives", "expense_narratives", "risks", "recommended_actions"],
+  "properties": {
+    "executive_summary": {
+      "type": "string",
+      "description": "2-3 sentences summarizing the period: revenue vs. budget, expenses vs. budget, operating income result, primary drivers."
+    },
+    "attention_items": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 4,
+      "description": "Items requiring leadership attention. Each should name the issue, quantify exposure, and explain why it needs action."
+    },
+    "revenue_narratives": {
+      "type": "object",
+      "description": "Keyed by account_code. Only material revenue variances.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["drivers"],
+        "properties": {
+          "drivers": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Bullet point explanations for this variance."
+          },
+          "context": {
+            "type": ["string", "null"],
+            "description": "Optional trend note or additional context."
+          },
+          "action_required": {
+            "type": ["string", "null"],
+            "description": "Specific action if warranted."
+          }
+        }
+      }
+    },
+    "expense_narratives": {
+      "type": "object",
+      "description": "Keyed by account_code. Only material expense variances.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["drivers", "recurring"],
+        "properties": {
+          "drivers": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Bullet point explanations for this variance."
+          },
+          "context": {
+            "type": ["string", "null"],
+            "description": "Optional additional context."
+          },
+          "action_required": {
+            "type": ["string", "null"],
+            "description": "Specific action if warranted."
+          },
+          "recurring": {
+            "type": "string",
+            "enum": ["Yes", "No", "Partially", "Timing", "TBD"],
+            "description": "Whether this variance is expected to recur."
+          }
+        }
+      }
+    },
+    "cogs_summary": {
+      "type": "string",
+      "description": "1-2 sentences on overall COGS position and gross margin impact."
+    },
+    "opex_summary": {
+      "type": "string",
+      "description": "1-2 sentences on overall OpEx position."
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["risk", "exposure", "trigger"],
+        "properties": {
+          "risk": { "type": "string" },
+          "exposure": { "type": "string" },
+          "trigger": { "type": "string" }
+        }
+      },
+      "minItems": 2,
+      "maxItems": 5
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action", "owner", "by_date"],
+        "properties": {
+          "action": { "type": "string" },
+          "owner": { "type": "string" },
+          "by_date": { "type": "string" }
+        }
+      },
+      "minItems": 2,
+      "maxItems": 5
+    }
+  }
+}

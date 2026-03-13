@@ -1,0 +1,156 @@
+{
+  "executive_summary": "February revenue of $473,400 exceeded budget by $15,400 (+3.4%), driven by strong SaaS subscription growth that more than offset a $6,500 shortfall in professional services. Total expenses exceeded budget by $14,100 (+3.3%), primarily from legal costs and accelerated engineering contractor spend. Operating income of $31,300 beat plan by $1,300 (+4.3%) — revenue trajectory is healthy and expense overages are explainable.",
+  "attention_items": [
+    "Professional services pipeline — $6,500 miss this month with two delayed projects signaling potential Q2 softness. Review pipeline with sales by March 15.",
+    "Engineering contractor spend — $6,500 over budget (+54%) with month-over-month increase of 95%. No confirmed roll-off date for the current engagement."
+  ],
+  "revenue_narratives": {
+    "4100": {
+      "drivers": [
+        "Subscription revenue of $412,800 exceeded budget by $17,800 (+4.5%), with month-over-month growth of $34,600 (+9.1%)",
+        "[VERIFY: Enterprise upsells and expansion activity] drove the beat — net dollar retention trending above plan",
+        "Logo churn was below budgeted levels, contributing to the positive variance"
+      ],
+      "context": "Third consecutive month of positive subscription variance. MoM acceleration from $378,200 to $412,800 suggests the growth trajectory is strengthening.",
+      "action_required": null
+    },
+    "4200": {
+      "drivers": [
+        "Professional services revenue of $38,500 missed budget by $6,500 (-14.4%) and declined $2,700 from prior month",
+        "[VERIFY: Two implementation projects delayed due to customer-side resource constraints]",
+        "Backlog appears intact — revenue is deferred rather than lost"
+      ],
+      "context": "Month-over-month decline of 6.6% after a stable January. If delays persist, Q2 services forecast should be adjusted.",
+      "action_required": "Review Q2 professional services pipeline with sales. Confirm delayed projects are rescheduled. Assess whether quarterly target needs revision."
+    },
+    "4300": {
+      "drivers": [
+        "Usage-based revenue of $22,100 exceeded budget by $4,100 (+22.8%) with strong MoM growth of $5,300 (+31.6%)",
+        "[VERIFY: Production workload adoption by existing customers] driving higher API call volumes",
+        "Usage pricing model performing as designed — revenue scales with adoption"
+      ],
+      "context": "Largest percentage variance in the revenue mix. Monitor whether this growth rate is sustainable or driven by one-time customer onboarding.",
+      "action_required": null
+    }
+  },
+  "expense_narratives": {
+    "5200": {
+      "drivers": [
+        "Third-party API costs of $8,900 exceeded budget by $1,400 (+18.7%), correlated with the usage revenue beat",
+        "Variable cost rising in line with variable revenue — acceptable margin trade"
+      ],
+      "context": null,
+      "action_required": null,
+      "recurring": "Yes"
+    },
+    "6100": {
+      "drivers": [
+        "Engineering salaries of $142,000 came in $6,000 below budget (-4.1%)",
+        "[VERIFY: Senior hire started mid-February rather than beginning of month], resulting in a half-month timing variance"
+      ],
+      "context": "Expect this to normalize in March when the hire is on payroll for a full month.",
+      "action_required": null,
+      "recurring": "Timing"
+    },
+    "6110": {
+      "drivers": [
+        "Engineering contractor spend of $18,500 exceeded budget by $6,500 (+54.2%) — second consecutive month of increase (up from $9,500 in January, +94.7% MoM)",
+        "[VERIFY: Frontend contractor engaged for API v2 dashboard project]"
+      ],
+      "context": "Month-over-month increase of $9,000 is the largest single MoM expense movement. If the engagement extends beyond March, this becomes a structural cost without a corresponding budget line.",
+      "action_required": "Confirm contractor roll-off date. If extension is needed, bring a budget revision proposal to leadership.",
+      "recurring": "TBD"
+    },
+    "6210": {
+      "drivers": [
+        "Paid advertising of $15,200 came in $4,800 below budget (-24.0%) and declined $3,500 from prior month",
+        "[VERIFY: Intentional pause on underperforming campaigns pending creative refresh]"
+      ],
+      "context": "Favorable variance but worth monitoring — sustained underspend may indicate pipeline generation risk if not offset by organic or event-driven leads.",
+      "action_required": null,
+      "recurring": "Timing"
+    },
+    "6220": {
+      "drivers": [
+        "Events and sponsorships of $4,800 exceeded budget by $1,800 (+60.0%), up from $1,200 in January",
+        "[VERIFY: Unplanned fintech meetup sponsorship generating qualified leads]"
+      ],
+      "context": null,
+      "action_required": null,
+      "recurring": "No"
+    },
+    "6310": {
+      "drivers": [
+        "Legal and professional fees of $11,200 exceeded budget by $5,200 (+86.7%) — nearly doubling from $5,800 in January",
+        "[VERIFY: Series B term sheet review and IP assignment cleanup] — expected to be non-recurring if financing closes on schedule"
+      ],
+      "context": "Second-largest dollar variance in OpEx. Non-recurring classification depends on Series B timeline.",
+      "action_required": null,
+      "recurring": "No"
+    },
+    "6400": {
+      "drivers": [
+        "Travel and entertainment of $6,700 exceeded budget by $1,700 (+34.0%), up from $3,900 in January",
+        "[VERIFY: Unplanned customer meetings for renewal discussions — both renewals secured]"
+      ],
+      "context": "ROI-positive spend if renewals are confirmed, but T&E trending above plan for two consecutive months.",
+      "action_required": null,
+      "recurring": "No"
+    },
+    "6500": {
+      "drivers": [
+        "Recruiting and hiring costs of $8,400 exceeded budget by $4,400 (+110.0%) — up from $2,100 in January (4x MoM increase)",
+        "[VERIFY: Agency fees for active searches — roles are budgeted but agency fee line was underestimated in annual plan]"
+      ],
+      "context": "If remaining open roles also use agency placement, this line will continue to exceed budget throughout the hiring period.",
+      "action_required": "Evaluate recruiting approach for remaining open roles — renegotiate agency terms or shift to direct sourcing to bring costs in line.",
+      "recurring": "Partially"
+    }
+  },
+  "cogs_summary": "Total COGS of $89,700 exceeded budget by $4,200 (+4.9%), primarily driven by higher API costs correlated with the usage revenue beat. Gross margin at 81.1% remains within the 80-83% target band, down 0.3 points from budget but improving 0.7 points month-over-month.",
+  "opex_summary": "Total OpEx of $352,400 exceeded budget by $9,900 (+2.9%). Favorable variances in engineering salaries (-$6,000) and advertising (-$4,800) partially offset unfavorable legal (+$5,200), contractor (+$6,500), and recruiting (+$4,400) spend. Net OpEx overage is manageable — the largest unfavorable items (legal, contractors) are expected to be non-recurring or time-bounded.",
+  "risks": [
+    {
+      "risk": "Professional services pipeline softness",
+      "exposure": "$20,000+/month if Q2 projects do not reschedule and no replacement deals close",
+      "trigger": "Delayed projects not confirmed for March/April delivery by March 15"
+    },
+    {
+      "risk": "Engineering contractor spend creep",
+      "exposure": "$6,500/month ongoing if engagement is not capped or rolled off",
+      "trigger": "API v2 frontend project extends past March without a defined end date"
+    },
+    {
+      "risk": "Cloud infrastructure cost trajectory",
+      "exposure": "Approximately $15,000 additional annually at current 4% MoM growth rate vs. budgeted 2%",
+      "trigger": "Production workload growth continues without cost optimization measures"
+    },
+    {
+      "risk": "Recruiting costs underbudgeted",
+      "exposure": "$4,000/month above plan if agency placement continues at current rate",
+      "trigger": "Remaining open roles filled through agencies at current fee structure"
+    }
+  ],
+  "recommended_actions": [
+    {
+      "action": "Review Q2 professional services pipeline — confirm rescheduled projects and assess whether quarterly revenue target needs adjustment",
+      "owner": "VP Sales",
+      "by_date": "March 15"
+    },
+    {
+      "action": "Confirm contractor roll-off date for API v2 frontend — if extension needed, prepare budget revision for leadership review",
+      "owner": "VP Engineering",
+      "by_date": "March 18"
+    },
+    {
+      "action": "Audit AWS spend by workload tag and set monthly cost alert at 105% of budget",
+      "owner": "Engineering",
+      "by_date": "March 20"
+    },
+    {
+      "action": "Decide recruiting approach for remaining open roles — renegotiate agency terms or shift to direct sourcing",
+      "owner": "People Ops",
+      "by_date": "March 22"
+    }
+  ]
+}

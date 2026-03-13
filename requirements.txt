@@ -1,0 +1,5 @@
+# E-Solutions pilot pipeline dependencies
+# Install: pip install -r requirements.txt
+
+pandas>=2.0
+openpyxl>=3.1

@@ -1,0 +1,17 @@
+{
+  "company_name": "NovaCRM, Inc.",
+  "period_display": "February 2026",
+  "period_code": "2026-02",
+  "prepared_by": "E-Solutions",
+  "checkpoint_id": "VR-2026-02-0047",
+  "memo_status": "DRAFT — Pending finance QA review",
+  "validation_summary": "2026-03-05 09:14 UTC · 18 line items · Schema pass · Injection scan pass",
+  "source_system": "QuickBooks Online",
+  "gl_export_date": "2026-03-04",
+  "budget_source": "Board-approved 2026 annual budget, v2.1",
+  "prior_period_checkpoint": "VR-2026-01-0031",
+  "coa_template": "coa-template-novaCRM, v1.2",
+  "coa_template_hash": "a3f8c1d",
+  "analysis_engine": "E-Solutions variance engine v0.1",
+  "qa_reviewer": "Matt (provisional)"
+}

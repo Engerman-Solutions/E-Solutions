@@ -1,5 +1,51 @@
 # Work Log
 
+## 2026-03-12 — AI narrative workflow and memo assembly (TICKET-005)
+
+**What was done:**
+
+Deliverable Group A — Narrative generation spec:
+- Created `product/narrative_generation_spec_v1.md`: defines where AI narrative fits in the pipeline (Stage 4 of 7), inputs (variance JSON + company context), outputs (structured narrative JSON), model config (Claude Sonnet claude-sonnet-4-6, temperature 0.3, max tokens 4000), fallback chain (retry → Opus → manual Claude chat → manual writing), AI vs. deterministic vs. manual responsibility matrix, and quality assessment criteria.
+
+Deliverable Group B — Prompt templates:
+- Created `prompts/variance_memo_system_prompt_v1.md`: 8 rules (numeric faithfulness, no hallucination, grounded explanations, board-ready tone, conciseness, signal consistency, recurring classification, materiality focus). Output must be valid JSON with no markdown or code fences.
+- Created `prompts/variance_memo_user_prompt_v1.md`: template with `{{PLACEHOLDER}}` values for company context, topline JSON, material line items JSON, computation metadata. Defines exact JSON output structure.
+- Created `prompts/variance_memo_review_prompt_v1.md`: 5-section review checklist (numeric accuracy, no hallucination, completeness, tone, structure) for operator quality check before QA review.
+
+Deliverable Group C — Structured I/O schemas and sample data:
+- Created `product/narrative_input_schema_v1.json`: JSON schema for narrative generation input (company context + variance computation output).
+- Created `product/narrative_output_schema_v1.json`: JSON schema for narrative generation output (executive summary, attention items, revenue/expense narratives, risks, actions).
+- Created `product/sample_narrative_input_v1.json`: full sample input assembled from variance computation output + NovaCRM company context.
+- Created `product/sample_narrative_output_v1.json`: test fixture with realistic narrative sections including [VERIFY] markers for unconfirmable details.
+- Created `product/sample_company_context_v1.json`: NovaCRM metadata including QA reviewer designation.
+
+Deliverable Group D — Memo assembly:
+- Created `product/memo_assembly_spec_v1.md`: defines 3 inputs (variance JSON, narrative JSON, context JSON), section rendering rules, number formatting, CLI usage.
+- Created `product/assemble_memo_v1.py`: assembly script that combines variance + narrative + context → markdown memo. Supports running without `--narrative` (inserts placeholder markers). Renders all sections: metadata, executive summary, topline table, revenue detail, expense detail, risks, actions, provenance.
+
+Deliverable Group E — Operator run instructions:
+- Created `ops/run_narrative_workflow_v1.md`: 9-step operator instructions covering validate → compute → prepare context → generate narrative (3 options) → quality check → assemble → Matt QA review → customer approval → delivery. Includes troubleshooting table, sample pipeline commands, and file location quick reference. Matt documented as provisional QA reviewer.
+
+Deliverable Group F — Reproducibility:
+- Created `requirements.txt`: pandas>=2.0, openpyxl>=3.1.
+- Created `Makefile`: targets for setup, validate, compute, assemble, sample-pipeline, clean. `make sample-pipeline` runs full end-to-end on sample data.
+- Updated `.gitignore`: added `output/` and `__pycache__/`.
+
+**Testing:**
+- Ran `make sample-pipeline` — all 3 steps succeeded:
+  - Step 1: Validate → PASS (18 rows, 0 errors, 0 warnings)
+  - Step 2: Compute variances → output/variance_output.json
+  - Step 3: Assemble memo → deliverables/generated_memo_draft_v1.md
+- Generated memo structurally matches sample_variance_memo_v2.md with correct numbers, narrative sections, [VERIFY] markers, and provenance trail.
+
+**Key decisions made:**
+- DEC-015: Matt is the provisional finance QA reviewer for the pilot
+- DEC-016: AI narrative generation uses Claude Sonnet with structured prompts at temperature 0.3
+
+**Outcome:** E-Solutions now has a complete, reproducible variance memo pipeline: validate → compute → generate narrative → assemble → review. The pipeline produces a board-ready memo from raw financial data with full audit trail. Remaining pre-pilot items: PDF conversion testing, DPA draft, QA reviewer contracting.
+
+---
+
 ## 2026-03-12 — Pre-pilot sprint Week 1: infrastructure foundations (TICKET-004)
 
 **What was done:**
