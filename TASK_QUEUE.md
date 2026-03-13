@@ -15,7 +15,7 @@
 | 20 | Draft Data Processing Agreement | P0 | Requirements defined | — | Required before any customer provides real financial data. DPA requirements doc created; actual DPA draft requires legal counsel. |
 | 21 | Test PDF conversion pipeline | P1 | Not started | — | Convert sample_variance_memo_v2.md to PDF using format_notes_v1.md spec. Verify quality. |
 | 22 | Write customer communication templates | P1 | Not started | — | Upload instructions, validation errors, approval requests, delivery notifications. |
-| 9 | Build MVP variance analysis pipeline | P1 | Core pipeline complete | — | Core technical workflow: intake → validation → COA mapping → AI analysis → report generation → checkpoint. End-to-end pipeline tested with sample data. |
+| 9 | Build MVP variance analysis pipeline | P1 | Done | — | Core technical workflow: intake → validation → COA mapping → AI analysis → report generation → checkpoint. Full end-to-end pipeline with live AI generation tested. |
 | 10 | Design and build reviewer UI (clean-room) | P2 | Not started | — | Human QA reviewers need a UI with PII masking, approval controls, and audit logging before pilot delivery. |
 | 11 | Research competitor positioning and gaps | P2 | Not started | — | Sharpen differentiation against Mosaic, Jirav, Cube, DataRails, Pilot, Vena. |
 | 12 | Define pricing model and ROI calculator | P2 | Not started | — | Needed before converting design partners to paid. Frame around time savings and error reduction. |
@@ -36,3 +36,4 @@
 | 3.1 | Polish proof assets and define pilot workflow | 2026-03-12 | TICKET-003: v2 memo, format notes, pilot package v2, demo narrative v2, live pilot workflow, gaps/build priorities |
 | 3.2 | Pre-pilot sprint Week 1: infrastructure foundations | 2026-03-12 | TICKET-004: validation scripts, variance computation, COA mapping, secure intake plan, DPA requirements |
 | 3.3 | AI narrative workflow and memo assembly | 2026-03-12 | TICKET-005: narrative spec, prompt templates, I/O schemas, assembly script, operator run instructions, Makefile, end-to-end pipeline test |
+| 3.4 | Wire live AI narrative generation into pipeline | 2026-03-13 | TICKET-006: live generation script, API integration, audit trail, true end-to-end dry run with Claude Sonnet |

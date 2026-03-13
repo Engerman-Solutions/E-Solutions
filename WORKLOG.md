@@ -1,5 +1,45 @@
 # Work Log
 
+## 2026-03-13 — Wire live AI narrative generation into pipeline (TICKET-006)
+
+**What was done:**
+
+Deliverable Group A — Live narrative generation implementation:
+- Created `product/generate_narrative_v1.py`: CLI script that calls the Anthropic API to generate variance memo narrative sections. Loads narrative input JSON, renders system and user prompts from existing templates, calls Claude Sonnet (claude-sonnet-4-6) at temperature 0.3, parses and validates the JSON output against the expected schema, and saves all artifacts for audit. Supports `--fallback` (try Opus if Sonnet fails), `--dry-run` (render prompts without API call), and configurable artifact directories.
+- Created `product/live_narrative_generation_spec_v1.md`: documents the direct Anthropic SDK integration approach, model configuration, authentication via `.env`, CLI usage, retry/fallback behavior (up to 4 attempts with fallback), output validation rules, dry run mode, and operator intervention points.
+
+Deliverable Group B — Generation audit trail:
+- Created `ops/generation_audit_trail_v1.md`: defines the artifact directory structure (`output/artifacts/run_YYYYMMDD_HHMMSS/`), describes each artifact file (narrative input, rendered prompts, raw model responses, usage metadata, validated output, run metadata, error files), explains what is and is not stored, retention policy, inspection instructions, and reproducibility notes.
+
+Deliverable Group C — Dry-run execution:
+- Ran `make live-pipeline` — full end-to-end pipeline with live AI narrative generation.
+- Claude Sonnet succeeded on first attempt: 3,405 input tokens, 3,021 output tokens, `end_turn` stop reason.
+- Schema validation passed on first attempt — no retry or fallback needed.
+- Produced `deliverables/generated_memo_draft_v2.md` — a complete board-ready variance memo assembled from live AI-generated narratives.
+- Quality assessment: AI narratives are higher quality than the hand-crafted fixture. Cross-references between line items (e.g., connecting contractor overage to salary underspend), sharper risk quantification, more specific recommended actions. [VERIFY] markers appropriately placed.
+
+Deliverable Group D — Operator instructions update:
+- Updated `ops/run_narrative_workflow_v1.md`: Step 4 rewritten to prioritize the live generation script (Option A), with dry-run-assisted manual chat (Option B) and manual writing (Option C). Added `.env` prerequisite. Updated file location table. Updated troubleshooting table with JSON parse and schema validation errors. Updated sample pipeline runs section with `make live-pipeline` and step-by-step commands.
+- Created `ops/live_generation_troubleshooting_v1.md`: covers authentication issues, API errors, output quality issues, artifact inspection commands, and escalation path.
+
+Deliverable Group E — Pipeline usability:
+- Updated `Makefile`: added `generate` target for standalone narrative generation, added `live-pipeline` target for full end-to-end with live AI.
+- Updated `requirements.txt`: added `anthropic>=0.40` and `python-dotenv>=1.0`.
+- Created `.env` (gitignored) with Anthropic API key.
+- Updated `.gitignore`: added `.env`.
+
+**Live dry-run results:**
+- Generation: SUCCESS — Claude Sonnet, 1 attempt, schema validation PASS
+- Revenue narratives: 3 (all material items covered)
+- Expense narratives: 8 (all material items covered)
+- Risks: 3, Recommended actions: 4
+- Artifacts saved to `output/artifacts/run_20260313_024356/`
+- No manual cleanup or retry was needed
+
+**Outcome:** E-Solutions now has a fully functional end-to-end pipeline from raw financial data to board-ready draft variance memo with live AI narrative generation. The pipeline: validate → compute → generate narrative (live Claude API) → assemble memo. All generation runs produce auditable artifacts. The remaining gap before pilot delivery is PDF conversion.
+
+---
+
 ## 2026-03-12 — AI narrative workflow and memo assembly (TICKET-005)
 
 **What was done:**

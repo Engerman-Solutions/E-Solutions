@@ -2,7 +2,7 @@
 
 Priority-ordered. Top of the list = do first.
 
-1. **Test PDF conversion pipeline.** Convert the generated_memo_draft_v1.md to PDF using format_notes_v1.md spec. Test Pandoc with custom HTML/CSS template or Typst. Produce a polished sample PDF for demos and outreach. This is the last deliverable-quality gap before a memo can be shown to a prospect.
+1. **Test PDF conversion pipeline.** Convert generated_memo_draft_v2.md to PDF using format_notes_v1.md spec. Test Pandoc with custom HTML/CSS template or Typst. Produce a polished sample PDF for demos and outreach. This is the last deliverable-quality gap before a memo can be shown to a prospect.
 
 2. **Draft the actual DPA.** Requirements are documented in ops/dpa_requirements_and_open_questions_v1.md. Start from a standard DPA template, customize for E-Solutions, and have legal counsel review. Must be signed before any customer provides real financial data.
 
@@ -16,7 +16,7 @@ Priority-ordered. Top of the list = do first.
 
 7. **Define the onboarding flow.** Document what happens after a design partner says yes: data requirements checklist, COA mapping walkthrough, access setup, first-cycle timeline, weekly feedback cadence. Target: go-live within 2 weeks of signed agreement.
 
-8. **Run the full pipeline on a real customer dataset.** Once a design partner is signed and data is received, execute the pipeline documented in ops/run_narrative_workflow_v1.md. Measure time per stage. Identify bottlenecks.
+8. **Run the full pipeline on a real customer dataset.** Once a design partner is signed and data is received, execute the pipeline via `make live-pipeline` or step-by-step as documented in ops/run_narrative_workflow_v1.md. Measure time per stage. Identify bottlenecks.
 
 9. **Contract a dedicated QA reviewer.** Matt is provisional. Before scaling beyond 1 design partner, identify and onboard a part-time contractor with FP&A or controllership experience.
 

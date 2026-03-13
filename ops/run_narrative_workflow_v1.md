@@ -18,8 +18,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Customer GL export file (CSV or Excel) available
-4. Company context JSON file prepared (see `product/sample_company_context_v1.json` for template)
+3. `.env` file in the repo root with `ANTHROPIC_API_KEY=sk-ant-...` (required for live generation)
+4. Customer GL export file (CSV or Excel) available
+5. Company context JSON file prepared (see `product/sample_company_context_v1.json` for template)
 
 ---
 
@@ -62,47 +63,47 @@ The narrative input combines the variance output and company context. For the Cl
 
 ### Step 4: Generate narrative sections
 
-**Option A: Claude API (preferred)**
+**Option A: Live generation script (preferred)**
 
-Use the system prompt and user prompt templates to generate narrative sections:
-
-1. Read `prompts/variance_memo_system_prompt_v1.md` — this is the system message
-2. Read `prompts/variance_memo_user_prompt_v1.md` — this is the user message template
-3. Fill the template placeholders with data from `output/variance_output.json` and `config/{customer}_context.json`
-4. Send to Claude API (claude-sonnet-4-6, temperature 0.3)
-5. Save the JSON response as `output/narrative_output.json`
-
-Example API call (using the Anthropic Python SDK):
-
-```python
-import anthropic
-import json
-
-client = anthropic.Anthropic()
-
-system_prompt = open("prompts/variance_memo_system_prompt_v1.md").read()
-user_prompt = # ... fill the template with actual data ...
-
-response = client.messages.create(
-    model="claude-sonnet-4-6",
-    max_tokens=4000,
-    temperature=0.3,
-    system=system_prompt,
-    messages=[{"role": "user", "content": user_prompt}]
-)
-
-narrative = json.loads(response.content[0].text)
-with open("output/narrative_output.json", "w") as f:
-    json.dump(narrative, f, indent=2)
+```bash
+python product/generate_narrative_v1.py \
+  --input product/sample_narrative_input_v1.json \
+  --output output/narrative_output.json
 ```
+
+This script:
+- Loads the narrative input JSON (variance data + company context)
+- Renders the system and user prompts from templates
+- Calls Claude Sonnet via the Anthropic API
+- Validates the output JSON against the expected schema
+- Saves audit artifacts to `output/artifacts/run_YYYYMMDD_HHMMSS/`
+
+**With fallback to Opus** (if Sonnet output quality is poor):
+
+```bash
+python product/generate_narrative_v1.py \
+  --input product/sample_narrative_input_v1.json \
+  --output output/narrative_output.json \
+  --fallback
+```
+
+**Dry run** (render prompts without calling API — useful for inspection or manual chat):
+
+```bash
+python product/generate_narrative_v1.py \
+  --input product/sample_narrative_input_v1.json \
+  --dry-run
+```
+
+See `product/live_narrative_generation_spec_v1.md` for retry/fallback behavior and `ops/generation_audit_trail_v1.md` for artifact details.
 
 **Option B: Manual Claude chat**
 
-1. Open claude.ai or Claude desktop app
-2. Paste the system prompt as the first message
-3. Paste the filled user prompt (with variance data and company context) as the second message
-4. Copy the JSON response
-5. Save as `output/narrative_output.json`
+1. Run a dry run to get rendered prompts: `python product/generate_narrative_v1.py --input <input.json> --dry-run`
+2. Open the rendered prompts from `output/artifacts/run_*/rendered_system_prompt.md` and `rendered_user_prompt.md`
+3. Paste the system prompt as the first message in claude.ai or Claude desktop
+4. Paste the rendered user prompt as the second message
+5. Copy the JSON response and save as `output/narrative_output.json`
 
 **Option C: Write narrative manually**
 
@@ -180,6 +181,10 @@ python product/assemble_memo_v1.py \
 | `product/sample_company_context_v1.json` | Template for company context file |
 | `product/sample_narrative_input_v1.json` | Example of full narrative input |
 | `product/sample_narrative_output_v1.json` | Example of expected narrative output |
+| `product/generate_narrative_v1.py` | Live AI narrative generation script |
+| `product/live_narrative_generation_spec_v1.md` | Live generation specification |
+| `ops/generation_audit_trail_v1.md` | Audit artifact documentation |
+| `ops/live_generation_troubleshooting_v1.md` | Troubleshooting guide for generation issues |
 
 ---
 
@@ -187,19 +192,39 @@ python product/assemble_memo_v1.py \
 
 | Problem | Action |
 |---------|--------|
-| AI generates generic boilerplate | Add more specific data to the user prompt (e.g., MoM trends, customer notes) |
-| AI invents details not in the data | Check that the system prompt is included; re-run with temperature 0.2 |
+| AI generates generic boilerplate | Add customer_notes to the narrative input JSON with specific context |
+| AI invents details not in the data | Re-run; if persistent, try with `--fallback` (Opus) or write those sections manually |
 | Numbers in narrative do not match source | Re-run; if persistent, write those sections manually |
-| Missing narratives for material items | Check that all material items are included in the user prompt input |
+| Missing narratives for material items | Check that all material items are in the input JSON with `is_material: true` |
 | `[VERIFY]` markers throughout | Expected — these flag areas where the AI needs confirmation. Resolve with customer context or leave for reviewer. |
-| API returns an error or is unavailable | Fall back to Option B (manual Claude chat) or Option C (manual writing) |
+| JSON parse error | Check `output/artifacts/run_*/raw_response_attempt_*.txt` for formatting issues; re-run or parse manually |
+| Schema validation error | Check `output/artifacts/run_*/validation_errors_*.json` for details; fix JSON manually or re-run |
+| API returns an error or is unavailable | Re-run with `--fallback`; fall back to Option B (dry-run + manual chat) or Option C (manual writing) |
 
 ---
 
-## Sample Pipeline Run (Using Test Data)
+## Sample Pipeline Runs
+
+### Using static fixture (no API call)
 
 ```bash
-# Activate environment
+source .venv/bin/activate
+make sample-pipeline
+# Output: deliverables/generated_memo_draft_v1.md
+```
+
+### Using live AI generation (requires API key)
+
+```bash
+source .venv/bin/activate
+make live-pipeline
+# Output: deliverables/generated_memo_draft_v2.md
+# Artifacts: output/artifacts/run_YYYYMMDD_HHMMSS/
+```
+
+### Step-by-step live generation
+
+```bash
 source .venv/bin/activate
 
 # Step 1: Validate
@@ -208,16 +233,18 @@ python product/validation_checks_v1.py deliverables/sample_variance_data_v1.csv 
 # Step 2: Compute
 python product/variance_computation_v1.py deliverables/sample_variance_data_v1.csv --pretty --output output/variance_output.json
 
-# Step 3-4: Use pre-built sample narrative
-# (In production, generate via Claude API)
+# Step 3-4: Generate narrative (live AI)
+python product/generate_narrative_v1.py \
+  --input product/sample_narrative_input_v1.json \
+  --output output/narrative_output.json
 
 # Step 6: Assemble
 python product/assemble_memo_v1.py \
   --variance output/variance_output.json \
-  --narrative product/sample_narrative_output_v1.json \
+  --narrative output/narrative_output.json \
   --context product/sample_company_context_v1.json \
-  --output deliverables/generated_memo_draft_v1.md
+  --output deliverables/generated_memo_draft_v2.md
 
 # Review the output
-cat deliverables/generated_memo_draft_v1.md
+cat deliverables/generated_memo_draft_v2.md
 ```
