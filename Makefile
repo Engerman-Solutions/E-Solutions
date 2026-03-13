@@ -11,7 +11,7 @@ SAMPLE_CONTEXT = product/sample_company_context_v1.json
 SAMPLE_NARRATIVE = product/sample_narrative_output_v1.json
 SAMPLE_INPUT = product/sample_narrative_input_v1.json
 
-.PHONY: setup validate compute generate assemble sample-pipeline live-pipeline clean
+.PHONY: setup validate compute generate assemble sample-pipeline live-pipeline pdf-memo pdf-pilot pdf-all clean
 
 setup:
 	python3 -m venv .venv
@@ -82,6 +82,15 @@ live-pipeline:
 	@echo ""
 	@echo "=== Live pipeline complete ==="
 	@echo "Output: deliverables/generated_memo_draft_v2.md"
+
+pdf-memo:
+	./ops/generate_pdfs_v1.sh memo
+
+pdf-pilot:
+	./ops/generate_pdfs_v1.sh pilot
+
+pdf-all:
+	./ops/generate_pdfs_v1.sh all
 
 clean:
 	rm -rf $(OUTPUT_DIR)

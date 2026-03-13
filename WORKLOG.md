@@ -1,5 +1,37 @@
 # Work Log
 
+## 2026-03-13 — Build repeatable PDF generation workflow (TICKET-007)
+
+**What was done:**
+
+Deliverable Group A — PDF generation specification:
+- Created `ops/pdf_generation_spec_v1.md`: documents WeasyPrint as the conversion method (markdown → HTML → CSS → PDF), comparison to alternatives (Pandoc+LaTeX, Typst, headless Chrome), two CSS stylesheets (memo vs. pilot package), header/footer configuration, draft/approved status handling, provenance rendering, dependencies, and 5 known limitations with future improvement paths.
+
+Deliverable Group B — Reproducible conversion workflow:
+- Created `ops/generate_pdfs_v1.sh`: shell script that converts markdown to styled PDF via Python markdown + WeasyPrint. Supports `memo`, `pilot`, `sample`, and `all` targets. Checks for venv and dependencies before running. Fails clearly if dependencies are missing.
+- Created `ops/memo_style.css`: variance memo stylesheet — letter size, 1" margins, navy table headers, alternating row shading, sans-serif fonts, page headers (company/title/period), page footers (draft status/E-Solutions/page number).
+- Created `ops/pilot_style.css`: pilot package stylesheet — similar table styling, slightly larger body text, italic subtitle, confidential footer, no page header.
+- Updated `Makefile`: added `pdf-memo`, `pdf-pilot`, `pdf-all` targets.
+- Updated `requirements.txt`: added `weasyprint>=68.0`, `markdown>=3.6`.
+
+Deliverable Group C — Generated PDFs:
+- `deliverables/generated_memo_draft_v2.pdf` — 5 pages, ~38 KB. Live AI-generated variance memo.
+- `gtm/pilot_package_v2.pdf` — 3 pages, ~27 KB. Design partner pilot package.
+- `deliverables/sample_variance_memo_v2.pdf` — 5 pages, ~38 KB. Hand-crafted sample memo.
+- All valid PDF 1.7 documents. Tables, headings, bullets, spacing render cleanly.
+
+Deliverable Group D — Review notes:
+- Created `deliverables/pdf_review_notes_v1.md`: documents what was generated, what renders well, 5 known formatting issues (attention items inline, metadata table header, no variance coloring, left-aligned numbers, no logo), and 5 prioritized improvement recommendations.
+
+**Testing:**
+- All 3 PDFs generated successfully via `./ops/generate_pdfs_v1.sh all`
+- Visual inspection confirms: clean page layout, proper table rendering, correct headers/footers, readable typography, appropriate page breaks
+- PDFs are usable for internal review, demo conversations, and design partner outreach
+
+**Outcome:** E-Solutions now has a repeatable PDF generation path. The pipeline from raw data to board-ready PDF is: validate → compute → generate narrative → assemble markdown → convert to PDF. All steps are reproducible via Makefile targets. The PDFs are sufficient for pilot-stage use — known formatting limitations (variance coloring, number alignment) are documented for future refinement.
+
+---
+
 ## 2026-03-13 — Wire live AI narrative generation into pipeline (TICKET-006)
 
 **What was done:**
