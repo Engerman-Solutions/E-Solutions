@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engerman — Board-Ready Finance Narratives in Hours</title>
+  <meta name="description" content="Board-ready variance memos grounded in your system-of-record data, with traceability and approval workflows. Finance AI you can audit.">
+  <link rel="canonical" href="https://engermansolutions.com/">
+  <meta property="og:url" content="https://engermansolutions.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Preload critical resources for LCP -->
+  <link rel="preload" href="css/design-tokens.css" as="style">
+  <link rel="preload" href="css/base.css" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/homepage.css">
+
+  <!-- Defer non-critical JS -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Skip link (WCAG 2.2 AA) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ════════════════════════════════════════════════════
+       NAVIGATION — High information scent labels
+       ════════════════════════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="Engerman — Home">
+        <svg class="nav__logo-mark" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="10" height="10" rx="2"/><rect x="13" y="0" width="10" height="10" rx="2"/><rect x="26" y="0" width="10" height="10" rx="2"/><rect x="0" y="13" width="10" height="10" rx="2"/><rect x="13" y="13" width="10" height="10" rx="2"/><rect x="0" y="26" width="10" height="10" rx="2"/><rect x="13" y="26" width="10" height="10" rx="2"/><rect x="26" y="26" width="10" height="10" rx="2"/></svg>
+        <span>Engerman</span>
+      </a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" id="nav-links" role="menubar">
+          <li role="none"><a href="pages/how-it-works.html" role="menuitem">How It Works</a></li>
+          <li role="none"><a href="pages/sample-output.html" role="menuitem">Sample Output</a></li>
+          <li role="none"><a href="pages/pricing.html" role="menuitem">Pricing</a></li>
+          <li role="none"><a href="pages/security.html" role="menuitem">Security</a></li>
+          <li role="none"><a href="#" role="menuitem">Customers</a></li>
+          <li role="none"><a href="pages/pricing.html#evaluation" class="nav__cta" role="menuitem">Book Evaluation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ════════════════════════════════════════════════════
+         HERO — Clarity-first, 10-second comprehension
+         ════════════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="overline">AI-Augmented Finance Operations</p>
+          <h1 id="hero-heading">Board-ready finance narratives in hours &mdash; grounded&nbsp;&amp;&nbsp;auditable</h1>
+          <p class="hero__sub">
+            Generate variance explanations and board memos from your system-of-record data &mdash; without guessing. Every output links to source data, timestamps, and approvals.
+          </p>
+          <div class="hero__ctas">
+            <a href="pages/sample-output.html" class="btn btn--primary btn--lg">See Sample Output</a>
+            <a href="pages/pricing.html#evaluation" class="btn btn--secondary btn--lg">Book 20-min Evaluation</a>
+          </div>
+          <p class="hero__trust-link">
+            <a href="pages/security.html">Security &amp; AI governance <span aria-hidden="true">&rarr;</span></a>
+          </p>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <!-- Static composite: memo preview + sources + approval (LCP-friendly, no video) -->
+          <div class="memo-preview">
+            <div class="memo-preview__header">
+              <div class="memo-preview__dot memo-preview__dot--red"></div>
+              <div class="memo-preview__dot memo-preview__dot--amber"></div>
+              <div class="memo-preview__dot memo-preview__dot--green"></div>
+              <span class="memo-preview__title">Monthly Variance Memo — Feb 2026</span>
+            </div>
+            <div class="memo-preview__body">
+              <div class="memo-preview__badge"><span class="badge badge--green">Draft Ready</span></div>
+              <p class="memo-preview__h2">Executive Summary</p>
+              <p class="memo-preview__text">February revenue of <strong>$473.4K exceeded budget by $15.4K (+3.4%)</strong>, driven by strong SaaS subscription growth...</p>
+              <div class="memo-preview__table">
+                <div class="memo-preview__row memo-preview__row--header">
+                  <span>Metric</span><span>Actual</span><span>Budget</span><span>Var</span>
+                </div>
+                <div class="memo-preview__row">
+                  <span>Total Revenue</span><span>$473,400</span><span>$458,000</span><span class="text-green">+3.4%</span>
+                </div>
+                <div class="memo-preview__row">
+                  <span>Gross Profit</span><span>$383,700</span><span>$372,500</span><span class="text-green">+3.0%</span>
+                </div>
+                <div class="memo-preview__row">
+                  <span>Operating Income</span><span>$31,300</span><span>$30,000</span><span class="text-green">+4.3%</span>
+                </div>
+              </div>
+              <div class="memo-preview__source">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="var(--color-blue-500)"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.5 3h1v5h-1V4zm0 6h1v1h-1v-1z"/></svg>
+                <span>Source: QuickBooks GL export 2026-03-04 &middot; Checkpoint VR-2026-02-0047</span>
+              </div>
+            </div>
+            <!-- Approval timeline overlay -->
+            <div class="memo-preview__timeline">
+              <div class="timeline-step timeline-step--done">
+                <div class="timeline-step__icon">&#10003;</div>
+                <div><strong>Validated</strong><span>Mar 5, 09:14</span></div>
+              </div>
+              <div class="timeline-step timeline-step--done">
+                <div class="timeline-step__icon">&#10003;</div>
+                <div><strong>Generated</strong><span>Mar 5, 09:47</span></div>
+              </div>
+              <div class="timeline-step timeline-step--active">
+                <div class="timeline-step__icon">&#9679;</div>
+                <div><strong>QA Review</strong><span>In progress</span></div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-step__icon">&#9675;</div>
+                <div><strong>Approved</strong><span>Pending</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         PROOF BAR — Quantified outcomes
+         ════════════════════════════════════════════════════ -->
+    <section class="proof-bar bg-alt" aria-label="Key outcomes">
+      <div class="container">
+        <div class="proof-bar__inner">
+          <div class="proof-bar__stat">
+            <span class="proof-bar__number">8&ndash;15 hrs</span>
+            <span class="proof-bar__label">Saved per memo cycle</span>
+          </div>
+          <div class="proof-bar__divider" aria-hidden="true"></div>
+          <div class="proof-bar__stat">
+            <span class="proof-bar__number">&lt; 1 hr</span>
+            <span class="proof-bar__label">Close-to-commentary</span>
+          </div>
+          <div class="proof-bar__divider" aria-hidden="true"></div>
+          <div class="proof-bar__stat">
+            <span class="proof-bar__number">100%</span>
+            <span class="proof-bar__label">Audit trail on every narrative</span>
+          </div>
+          <div class="proof-bar__divider" aria-hidden="true"></div>
+          <div class="proof-bar__stat">
+            <span class="proof-bar__note">Built with finance teams from Seed&ndash;Series&nbsp;B</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         HOW IT WORKS — 3-step narrative
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <div class="text-center scroll-fade" style="max-width: 600px; margin: 0 auto var(--space-12);">
+          <p class="overline">How It Works</p>
+          <h2 id="hiw-heading">From close data to board memo in three steps</h2>
+        </div>
+
+        <div class="grid grid--3 hiw-grid scroll-stagger">
+          <!-- Step 1 -->
+          <div class="card hiw-card">
+            <div class="hiw-card__step">1</div>
+            <h3>Connect your data</h3>
+            <p class="text-secondary">Upload your GL export from QuickBooks, Xero, or NetSuite. We read your data &mdash; we never write back.</p>
+            <div class="hiw-card__icons" aria-label="Supported integrations">
+              <span class="hiw-icon">QBO</span>
+              <span class="hiw-icon">Xero</span>
+              <span class="hiw-icon">NetSuite</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="card hiw-card">
+            <div class="hiw-card__step">2</div>
+            <h3>Generate narratives</h3>
+            <p class="text-secondary">Scoped AI analyzes variances and drafts explanations. Every claim cites source data. The system won't guess &mdash; it asks or abstains.</p>
+            <div class="hiw-card__detail">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--color-blue-500)"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.5 3h1v5h-1V4zm0 6h1v1h-1v-1z"/></svg>
+              <span class="text-sm text-secondary">Sources panel links every line to GL data</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="card hiw-card">
+            <div class="hiw-card__step">3</div>
+            <h3>Review &amp; approve</h3>
+            <p class="text-secondary">Human finance reviewer checks every draft. Approval timeline, version history, and audit log are built in &mdash; not bolted on.</p>
+            <div class="hiw-card__detail">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--color-green-600)"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.3 5.3l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L6.75 7.7l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+              <span class="text-sm text-secondary">No memo delivered without human sign-off</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         SAMPLE OUTPUT — 3-tab composite (above fold ideally)
+         ════════════════════════════════════════════════════ -->
+    <section class="section bg-alt" id="sample-output" aria-labelledby="sample-heading">
+      <div class="container">
+        <div class="text-center scroll-fade" style="max-width: 650px; margin: 0 auto var(--space-10);">
+          <p class="overline">Sample Output</p>
+          <h2 id="sample-heading">See what your board gets</h2>
+          <p class="text-secondary">A real variance memo generated from sample data. Not a mock-up &mdash; actual pipeline output with sources and approval trail.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="sample-tabs-wrapper">
+          <div class="tabs" role="tablist" aria-label="Sample output views">
+            <button role="tab" class="tab active" aria-selected="true" id="tab-memo" aria-controls="panel-memo" tabindex="0">Board Memo</button>
+            <button role="tab" class="tab" aria-selected="false" id="tab-sources" aria-controls="panel-sources" tabindex="-1">Sources &amp; Evidence</button>
+            <button role="tab" class="tab" aria-selected="false" id="tab-approvals" aria-controls="panel-approvals" tabindex="-1">Approvals</button>
+          </div>
+
+          <!-- Panel: Board Memo -->
+          <div role="tabpanel" id="panel-memo" class="tab-panel active sample-panel" aria-labelledby="tab-memo">
+            <div class="sample-memo">
+              <div class="sample-memo__chrome">
+                <div class="sample-memo__dots"><span></span><span></span><span></span></div>
+                <span class="text-sm text-secondary">NovaCRM, Inc. &mdash; February 2026 Variance Memo</span>
+              </div>
+              <div class="sample-memo__content">
+                <h4>Executive Summary</h4>
+                <p>February revenue of <strong>$473.4K exceeded budget by $15.4K (+3.4%)</strong>, driven by strong SaaS subscription growth that more than offset a shortfall in professional services. Total expenses exceeded budget by $14.1K (+3.3%), primarily from legal costs tied to the Series B process.</p>
+                <p><strong>Operating income of $31.3K beat plan by $1.3K.</strong></p>
+
+                <h4>Topline Performance</h4>
+                <div class="table-wrap">
+                  <table class="table" aria-label="Topline financial performance">
+                    <thead>
+                      <tr><th>Metric</th><th>Actual</th><th>Budget</th><th>Var</th><th>Signal</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Total Revenue</td><td>$473,400</td><td>$458,000</td><td>+3.4%</td><td><span class="badge badge--green">Favorable</span></td></tr>
+                      <tr><td>Gross Profit</td><td>$383,700</td><td>$372,500</td><td>+3.0%</td><td><span class="badge badge--green">Favorable</span></td></tr>
+                      <tr><td>Total OpEx</td><td>$352,400</td><td>$342,500</td><td>+2.9%</td><td><span class="badge badge--amber">Watch</span></td></tr>
+                      <tr><td><strong>Operating Income</strong></td><td><strong>$31,300</strong></td><td><strong>$30,000</strong></td><td><strong>+4.3%</strong></td><td><span class="badge badge--green">Favorable</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-sm text-secondary" style="margin-top: var(--space-4);">Full memo continues with revenue detail, expense variance, headcount, risks, and recommended actions...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel: Sources -->
+          <div role="tabpanel" id="panel-sources" class="tab-panel sample-panel" aria-labelledby="tab-sources" hidden>
+            <div class="sample-sources">
+              <div class="sample-sources__header">
+                <h4>Evidence Chain</h4>
+                <p class="text-sm text-secondary">Every claim in the memo links back to source data and the analysis checkpoint.</p>
+              </div>
+              <div class="source-list">
+                <div class="source-item">
+                  <div class="source-item__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-blue-500)"><rect x="2" y="2" width="12" height="12" rx="2" stroke="var(--color-blue-500)" fill="none" stroke-width="1.5"/><path d="M5 6h6M5 8h4M5 10h5" stroke="var(--color-blue-500)" stroke-width="1.2"/></svg>
+                  </div>
+                  <div>
+                    <strong>GL Export</strong>
+                    <p class="text-sm text-secondary">QuickBooks Online &middot; Exported 2026-03-04 &middot; 18 line items</p>
+                  </div>
+                  <span class="badge badge--green">Validated</span>
+                </div>
+                <div class="source-item">
+                  <div class="source-item__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-blue-500)"><rect x="2" y="2" width="12" height="12" rx="2" stroke="var(--color-blue-500)" fill="none" stroke-width="1.5"/><path d="M5 6h6M5 8h4M5 10h5" stroke="var(--color-blue-500)" stroke-width="1.2"/></svg>
+                  </div>
+                  <div>
+                    <strong>Budget Source</strong>
+                    <p class="text-sm text-secondary">Board-approved 2026 annual budget, v2.1</p>
+                  </div>
+                  <span class="badge badge--green">Matched</span>
+                </div>
+                <div class="source-item">
+                  <div class="source-item__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-blue-500)"><circle cx="8" cy="8" r="6" stroke="var(--color-blue-500)" fill="none" stroke-width="1.5"/><path d="M8 5v3l2 2" stroke="var(--color-blue-500)" stroke-width="1.2" fill="none"/></svg>
+                  </div>
+                  <div>
+                    <strong>Prior Period</strong>
+                    <p class="text-sm text-secondary">January 2026 actuals &middot; Checkpoint VR-2026-01-0031</p>
+                  </div>
+                  <span class="badge badge--green">Verified</span>
+                </div>
+                <div class="source-item">
+                  <div class="source-item__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-blue-500)"><path d="M8 1l2.5 5.1 5.5.8-4 3.9.9 5.5L8 13.5l-4.9 2.8.9-5.5-4-3.9 5.5-.8z" stroke="var(--color-blue-500)" fill="none" stroke-width="1.2"/></svg>
+                  </div>
+                  <div>
+                    <strong>Schema Validation</strong>
+                    <p class="text-sm text-secondary">18/18 line items passed &middot; 0 errors &middot; 0 warnings &middot; Injection scan pass</p>
+                  </div>
+                  <span class="badge badge--green">Pass</span>
+                </div>
+                <div class="source-item">
+                  <div class="source-item__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-gray-500)"><path d="M3 3h10v10H3z" stroke="var(--color-gray-500)" fill="none" stroke-width="1.5" rx="1"/><path d="M6 8h4" stroke="var(--color-gray-500)" stroke-width="1.2"/></svg>
+                  </div>
+                  <div>
+                    <strong>COA Template</strong>
+                    <p class="text-sm text-secondary">coa-template-novaCRM, v1.2 (hash: a3f8c1d...)</p>
+                  </div>
+                  <span class="badge badge--gray">Logged</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel: Approvals -->
+          <div role="tabpanel" id="panel-approvals" class="tab-panel sample-panel" aria-labelledby="tab-approvals" hidden>
+            <div class="sample-approvals">
+              <div class="sample-approvals__header">
+                <h4>Approval Timeline</h4>
+                <p class="text-sm text-secondary">Every memo passes through validation, generation, QA review, and customer approval before delivery.</p>
+              </div>
+              <div class="approval-timeline">
+                <div class="approval-step approval-step--complete">
+                  <div class="approval-step__marker">
+                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="var(--color-green-600)"/><path d="M6 10l3 3 5-5" stroke="white" stroke-width="2" fill="none"/></svg>
+                  </div>
+                  <div class="approval-step__content">
+                    <strong>Data Validation</strong>
+                    <p class="text-sm text-secondary">Schema check, injection scan, line-item reconciliation</p>
+                    <span class="text-xs text-secondary">Mar 5, 2026 09:14 UTC &middot; Automated</span>
+                  </div>
+                </div>
+                <div class="approval-step approval-step--complete">
+                  <div class="approval-step__marker">
+                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="var(--color-green-600)"/><path d="M6 10l3 3 5-5" stroke="white" stroke-width="2" fill="none"/></svg>
+                  </div>
+                  <div class="approval-step__content">
+                    <strong>Narrative Generation</strong>
+                    <p class="text-sm text-secondary">Variance analysis computed, AI-drafted explanations with source citations</p>
+                    <span class="text-xs text-secondary">Mar 5, 2026 09:47 UTC &middot; Checkpoint VR-2026-02-0047</span>
+                  </div>
+                </div>
+                <div class="approval-step approval-step--active">
+                  <div class="approval-step__marker">
+                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="var(--color-blue-500)"/><circle cx="10" cy="10" r="4" fill="white"/></svg>
+                  </div>
+                  <div class="approval-step__content">
+                    <strong>Finance QA Review</strong>
+                    <p class="text-sm text-secondary">Human reviewer checks accuracy, edits narratives, validates conclusions</p>
+                    <span class="text-xs text-secondary">In progress &middot; SLA: 48 hours</span>
+                  </div>
+                </div>
+                <div class="approval-step">
+                  <div class="approval-step__marker">
+                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="none" stroke="var(--color-gray-300)" stroke-width="2"/></svg>
+                  </div>
+                  <div class="approval-step__content">
+                    <strong>Customer Approval</strong>
+                    <p class="text-sm text-secondary">CFO/Controller reviews and approves in portal before board delivery</p>
+                    <span class="text-xs text-secondary">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-8);">
+          <a href="pages/sample-output.html" class="btn btn--primary">View Full Sample Output</a>
+          <a href="pages/pricing.html#evaluation" class="btn btn--ghost">Book evaluation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         TRUST MODULE — AI controls finance expects
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="text-center scroll-fade" style="max-width: 600px; margin: 0 auto var(--space-10);">
+          <p class="overline">AI Controls</p>
+          <h2 id="trust-heading">AI governance finance teams expect</h2>
+          <p class="text-secondary">Explicit commitments, not marketing claims. Only statements that are true for Engerman today.</p>
+        </div>
+
+        <div class="grid grid--2 trust-grid scroll-stagger">
+          <div class="card trust-card">
+            <div class="trust-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-600)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>No training by default</h3>
+            <p class="text-secondary">Customer data is not used to train public models by default. You control retention and access. We process your data to generate your memo &mdash; nothing more.</p>
+          </div>
+
+          <div class="card trust-card">
+            <div class="trust-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-600)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Full traceability</h3>
+            <p class="text-secondary">Every generated narrative links to source data and includes timestamps and approval history. Source &rarr; logic &rarr; output &rarr; approval, all recorded.</p>
+          </div>
+
+          <div class="card trust-card">
+            <div class="trust-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-600)" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3>Hallucination containment</h3>
+            <p class="text-secondary">The system does not guess. If evidence is missing, it asks for clarification or flags uncertainty. Scoped AI on constrained tasks, not open-ended generation.</p>
+          </div>
+
+          <div class="card trust-card">
+            <div class="trust-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-600)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3>Access controls</h3>
+            <p class="text-secondary">Data isolation between customers enforced by design. RBAC, SSO, and least-privilege access. PII masked by default in reviewer UI.</p>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-8);">
+          <a href="pages/security.html" class="btn btn--secondary">View Security &amp; AI Governance</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         PRICING ANCHORS
+         ════════════════════════════════════════════════════ -->
+    <section class="section bg-alt" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="text-center scroll-fade" style="max-width: 600px; margin: 0 auto var(--space-10);">
+          <p class="overline">Pricing</p>
+          <h2 id="pricing-heading">Transparent pricing, not sales theater</h2>
+          <p class="text-secondary">Start with a 90-day pilot. Scale when your team is ready.</p>
+        </div>
+
+        <div class="grid grid--3 pricing-grid scroll-stagger">
+          <div class="card pricing-card">
+            <div class="pricing-card__header">
+              <h3>Pilot</h3>
+              <p class="text-sm text-secondary">90-day design partner</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">$1,500</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>Up to 3 memos/month</li>
+              <li>48-hour SLA</li>
+              <li>1 data source</li>
+              <li>Dedicated QA reviewer</li>
+              <li>Weekly feedback calls</li>
+            </ul>
+            <a href="pages/pricing.html#evaluation" class="btn btn--primary" style="width: 100%;">Start Pilot</a>
+          </div>
+
+          <div class="card pricing-card pricing-card--featured">
+            <div class="pricing-card__header">
+              <h3>Starter</h3>
+              <p class="text-sm">For lean finance teams</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">$3&ndash;4K</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>Up to 3 memos/month</li>
+              <li>48-hour SLA</li>
+              <li>1 data source</li>
+              <li>Portal access for team</li>
+              <li>Audit log &amp; version history</li>
+            </ul>
+            <a href="pages/pricing.html" class="btn btn--primary" style="width: 100%;">View Details</a>
+          </div>
+
+          <div class="card pricing-card">
+            <div class="pricing-card__header">
+              <h3>Pro</h3>
+              <p class="text-sm text-secondary">Multi-entity finance teams</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">$8&ndash;10K</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>Multiple entities</li>
+              <li>24-hour / 4-hour close-week SLA</li>
+              <li>Multiple data sources</li>
+              <li>Custom COA templates</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="pages/pricing.html" class="btn btn--secondary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <p class="text-center text-sm text-secondary" style="margin-top: var(--space-6);">
+          <strong>What drives price:</strong> data sources, entities, SLA tier, and support level.
+          <a href="pages/pricing.html">See full pricing breakdown &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         FINAL CTA
+         ════════════════════════════════════════════════════ -->
+    <section class="section bg-navy cta-section" aria-labelledby="cta-heading">
+      <div class="container text-center scroll-fade">
+        <h2 id="cta-heading">Ready to see your data in a board memo?</h2>
+        <p style="color: var(--color-gray-300); max-width: 520px; margin: var(--space-4) auto var(--space-8);">
+          Get a sample variance memo from your own GL export, or book a 20-minute evaluation with our team.
+        </p>
+        <div class="hero__ctas" style="justify-content: center;">
+          <a href="pages/sample-output.html" class="btn btn--primary btn--lg" style="background: var(--color-white); color: var(--color-navy-800);">See Sample Output</a>
+          <a href="pages/pricing.html#evaluation" class="btn btn--lg" style="border: 2px solid var(--color-white); color: var(--color-white);">Book 20-min Evaluation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" style="color: var(--color-white);">
+            <svg class="nav__logo-mark" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="10" height="10" rx="2"/><rect x="13" y="0" width="10" height="10" rx="2"/><rect x="26" y="0" width="10" height="10" rx="2"/><rect x="0" y="13" width="10" height="10" rx="2"/><rect x="13" y="13" width="10" height="10" rx="2"/><rect x="0" y="26" width="10" height="10" rx="2"/><rect x="13" y="26" width="10" height="10" rx="2"/><rect x="26" y="26" width="10" height="10" rx="2"/></svg>
+            <span>Engerman</span>
+          </a>
+          <p>Board-ready finance narratives, grounded in your data, with traceability and approval workflows.</p>
+          <p style="margin-top: var(--space-2);"><a href="mailto:info@engermansolutions.com" style="color: var(--color-gray-300);">info@engermansolutions.com</a></p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="pages/sample-output.html">Sample Output</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="pages/security.html">Security</a></li>
+            <li><a href="pages/security.html#ai-governance">AI Governance</a></li>
+            <li><a href="pages/security.html#data-controls">Data Controls</a></li>
+            <li><a href="mailto:security@engermansolutions.com?subject=Request%20SOC%202%20%2F%20DPA%20Documentation">Request SOC 2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Engerman Solutions, Inc. All rights reserved.</span>
+        <span>Data processed in accordance with our DPA.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

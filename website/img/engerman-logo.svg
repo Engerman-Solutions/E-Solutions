@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 36" fill="#192746">
+  <!-- Engerman logo: 3x3 mark + wordmark (for light backgrounds) -->
+  <!-- Mark -->
+  <rect x="0" y="0" width="10" height="10" rx="2"/>
+  <rect x="13" y="0" width="10" height="10" rx="2"/>
+  <rect x="26" y="0" width="10" height="10" rx="2"/>
+  <rect x="0" y="13" width="10" height="10" rx="2"/>
+  <rect x="13" y="13" width="10" height="10" rx="2"/>
+  <rect x="0" y="26" width="10" height="10" rx="2"/>
+  <rect x="13" y="26" width="10" height="10" rx="2"/>
+  <rect x="26" y="26" width="10" height="10" rx="2"/>
+  <!-- Wordmark -->
+  <text x="48" y="26" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.01em">Engerman</text>
+</svg>
