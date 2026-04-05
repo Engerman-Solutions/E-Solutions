@@ -178,48 +178,56 @@ document.addEventListener('DOMContentLoaded', () => {
       evalSection.innerHTML = 
         '<div style=text-align:center
 
-
-// ================================================================
 // EVALUATION FORM HANDLER
-// ================================================================
 (function() {
-  var form = document.querySelector(".eval-form");
+  var form = document.querySelector('.eval-form');
   if (!form) return;
 
-  form.addEventListener("submit", function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    var name = form.querySelector("#eval-name").value || "";
-    var email = form.querySelector("#eval-email").value || "";
-    var company = form.querySelector("#eval-company").value || "";
-    var accounting = form.querySelector("#eval-accounting").value || "";
-    var entities = form.querySelector("#eval-entities").value || "";
-    var pain = form.querySelector("#eval-pain").value || "";
+    var name = form.querySelector('#eval-name').value || '';
+    var email = form.querySelector('#eval-email').value || '';
+    var company = form.querySelector('#eval-company').value || '';
+    var acctEl = form.querySelector('#eval-accounting');
+    var accounting = acctEl.options[acctEl.selectedIndex] ? acctEl.options[acctEl.selectedIndex].text : '';
+    var entities = form.querySelector('#eval-entities').value || '';
+    var pain = form.querySelector('#eval-pain').value || '';
 
-    if (!name || !email || !company || !accounting || !entities) {
-      alert("Please fill in all required fields.");
+    if (!name || !email || !company || !acctEl.value || !entities) {
+      alert('Please fill in all required fields.');
       return;
     }
 
-    var subject = encodeURIComponent("New Evaluation Request - " + company);
+    var nl = String.fromCharCode(10);
+    var subject = encodeURIComponent('New Evaluation Request - ' + company);
     var body = encodeURIComponent(
-      "New Evaluation Request" + String.fromCharCode(10) +
-      "========================" + String.fromCharCode(10,10) +
-      "Name: " + name + String.fromCharCode(10) +
-      "Email: " + email + String.fromCharCode(10) +
-      "Company: " + company + String.fromCharCode(10) +
-      "Accounting System: " + accounting + String.fromCharCode(10) +
-      "Number of Entities: " + entities + String.fromCharCode(10) +
-      "Pain Point: " + pain + String.fromCharCode(10,10) +
-      "---" + String.fromCharCode(10) +
-      "Submitted from engermansolutions.com"
+      'New Evaluation Request' + nl +
+      '========================' + nl + nl +
+      'Name: ' + name + nl +
+      'Email: ' + email + nl +
+      'Company: ' + company + nl +
+      'Accounting System: ' + accounting + nl +
+      'Number of Entities: ' + entities + nl +
+      'Pain Point: ' + pain + nl + nl +
+      '---' + nl +
+      'Submitted from engermansolutions.com'
     );
 
-    window.open("mailto:info@engermansolutions.com?subject=" + subject + "&body=" + body, "_blank");
+    window.location.href = 'mailto:info@engermansolutions.com?subject=' + subject + '&body=' + body;
 
-    var grid = form.closest(".eval-grid");
+    var grid = form.closest('.eval-grid');
     if (grid) {
-      grid.innerHTML = "<div style="text-align:center;padding:60px 20px;max-width:560px;margin:0 auto"><h2 style="margin-bottom:16px">Evaluation request received</h2><p style="color:#6B7280;font-size:18px;margin-bottom:16px">Thank you, " + name + ". We will review your request and reach out within 1 business day to schedule your 20-minute evaluation.</p><p style="color:#9CA3AF;font-size:14px">A confirmation will be sent to <strong>" + email + "</strong></p></div>";
+      var h = '';
+      h += '<div style="text-align:center;padding:60px 20px;max-width:560px;margin:0 auto">';
+      h += '<div style="width:64px;height:64px;background:#ecfdf5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px">';
+      h += '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+      h += '</div>';
+      h += '<h2 style="margin-bottom:16px">Evaluation request received</h2>';
+      h += '<p style="color:#6B7280;font-size:18px;margin-bottom:16px">Thank you, ' + name + '. We will review your request and reach out within 1 business day to schedule your 20-minute evaluation.</p>';
+      h += '<p style="color:#9CA3AF;font-size:14px">A confirmation will be sent to <strong>' + email + '</strong></p>';
+      h += '</div>';
+      grid.innerHTML = h;
     }
   });
 })();
