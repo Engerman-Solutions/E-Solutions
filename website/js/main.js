@@ -129,3 +129,97 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) { /* not supported */ }
   }
 });
+
+// ════════════════════════════════════════════════════
+// EVALUATION FORM HANDLER
+// ════════════════════════════════════════════════════
+(function() {
+  const form = document.querySelector('.eval-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Gather form data
+    const name = form.querySelector('#eval-name')?.value || '';
+    const email = form.querySelector('#eval-email')?.value || '';
+    const company = form.querySelector('#eval-company')?.value || '';
+    const accounting = form.querySelector('#eval-accounting')?.value || '';
+    const entities = form.querySelector('#eval-entities')?.value || '';
+    const pain = form.querySelector('#eval-pain')?.value || '';
+
+    // Basic validation
+    if (!name || !email || !company || !accounting || !entities) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    // Build mailto link with form data
+    const subject = encodeURIComponent('New Evaluation Request — ' + company);
+    const body = encodeURIComponent(
+      'New Evaluation Request\n' +
+      '========================\n\n' +
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Company: ' + company + '\n' +
+      'Accounting System: ' + accounting + '\n' +
+      'Number of Entities: ' + entities + '\n' +
+      'Pain Point: ' + pain + '\n\n' +
+      '---\n' +
+      'Submitted from engermansolutions.com'
+    );
+
+    // Open email to send
+    window.open('mailto:info@engermansolutions.com?subject=' + subject + '&body=' + body, '_blank');
+
+    // Replace form with confirmation
+    const evalSection = form.closest('.eval-grid');
+    if (evalSection) {
+      evalSection.innerHTML = 
+        '<div style=text-align:center
+
+
+// ================================================================
+// EVALUATION FORM HANDLER
+// ================================================================
+(function() {
+  var form = document.querySelector(".eval-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = form.querySelector("#eval-name").value || "";
+    var email = form.querySelector("#eval-email").value || "";
+    var company = form.querySelector("#eval-company").value || "";
+    var accounting = form.querySelector("#eval-accounting").value || "";
+    var entities = form.querySelector("#eval-entities").value || "";
+    var pain = form.querySelector("#eval-pain").value || "";
+
+    if (!name || !email || !company || !accounting || !entities) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    var subject = encodeURIComponent("New Evaluation Request - " + company);
+    var body = encodeURIComponent(
+      "New Evaluation Request" + String.fromCharCode(10) +
+      "========================" + String.fromCharCode(10,10) +
+      "Name: " + name + String.fromCharCode(10) +
+      "Email: " + email + String.fromCharCode(10) +
+      "Company: " + company + String.fromCharCode(10) +
+      "Accounting System: " + accounting + String.fromCharCode(10) +
+      "Number of Entities: " + entities + String.fromCharCode(10) +
+      "Pain Point: " + pain + String.fromCharCode(10,10) +
+      "---" + String.fromCharCode(10) +
+      "Submitted from engermansolutions.com"
+    );
+
+    window.open("mailto:info@engermansolutions.com?subject=" + subject + "&body=" + body, "_blank");
+
+    var grid = form.closest(".eval-grid");
+    if (grid) {
+      grid.innerHTML = "<div style="text-align:center;padding:60px 20px;max-width:560px;margin:0 auto"><h2 style="margin-bottom:16px">Evaluation request received</h2><p style="color:#6B7280;font-size:18px;margin-bottom:16px">Thank you, " + name + ". We will review your request and reach out within 1 business day to schedule your 20-minute evaluation.</p><p style="color:#9CA3AF;font-size:14px">A confirmation will be sent to <strong>" + email + "</strong></p></div>";
+    }
+  });
+})();
