@@ -16,7 +16,7 @@ This branch replaces the live site's AI-first framing with what the sales desk a
 | `pages/about.html` | The founder's story as the business's story (2018 by hand → 2021 the company → 2026 the standard offer → two lanes), the founding client, a generic team block (no names), the company. No employer named. |
 | `pages/privacy.html` · `pages/terms.html` | Real pages behind the footer links that were dead. Website policy and terms — not the Service Terms clients sign. |
 | `forms/try-it-first.html` | **Two doors, one Microsoft Form each**, embedded inside the house chrome. `#founders` and `#nonprofits` preselect the door, so each lane page lands on its own form. Responses arrive in Microsoft 365 and by email notification. |
-| `forms/setup-questionnaire.html` | The 10-question nonprofit onboarding questionnaire with tax-status logic. `noindex`; sent as a private link after signing. With no endpoint it opens the client's email app with the answers already written; or rebuild it as a third Microsoft Form and link to that instead. |
+| `forms/setup-questionnaire.html` | Superseded for nonprofits: the ten setup questions now live in the nonprofit Try-it-first form, answered once. Kept on the branch only as the HTML reference; not linked from anywhere. |
 | `pages/pricing.html` · `pages/security.html` · `pages/how-it-works.html` | Redirect stubs so old links keep resolving. |
 | `css/remaster.css` · `css/site.css` · `css/design-tokens.css` | Live design system plus the remaster additions. |
 | `js/site-config.js` | Links: Matthew's LinkedIn, the Brief subscribe link, both Microsoft Forms. |
@@ -28,7 +28,7 @@ This branch replaces the live site's AI-first framing with what the sales desk a
 | | Founders & Operating Companies | Nonprofits & Associations |
 |---|---|---|
 | Title | Try it first — Founders & Operating Companies | Try it first — Nonprofits & Associations |
-| Questions | 12: name, role, work email, company, website (optional), who you answer to, accounting system, entities, most recently closed month, what they ask for (optional, long), how you found us, acknowledgment | 15: name, role, work email, organization, website (optional), tax status, annual budget, board cadence, fiscal year end, events with venue contracts, accounting system, who closes the books, what the board asks for (optional, long), how you found us, acknowledgment |
+| Questions | 12: name, role, work email, company, website (optional), who you answer to, accounting system, entities, most recently closed month, what they ask for (optional, long), how you found us, acknowledgment | **2 + 10**: your name and role, work email — then the ten setup questions from Service Offer rev v1.2, verbatim and in order (legal name and tax status; fiscal year end; board and finance committee dates; who approves and who receives; cash or accrual and last reconciliation; donor-restricted funds; reserve policy; program list; monthly spread; anything the board asks to see). Answered once; onboarding asks nothing twice. The acknowledgment is in the description, not a question. |
 | Theme | Brand navy #192746 | Brand navy #192746 |
 | Settings | Anyone can respond · email notification on each response · "Submit another response" hidden · custom thank-you | Same |
 | Link | `https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNjA3SExCVVRJTE80NVNJM0JWTEhZV1pQSC4u` | `https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNkxOU0RLQUJGMFpTWk1WRzNPWEdROVNPTC4u` |
@@ -47,7 +47,7 @@ The old "Free Beta Intake" form is untouched and no longer linked from the site.
 - **Founders' tiers:** all four carried over from the live site with what comes with each, plus the tier-by-tier table.
 - **Matthew's bio:** the business's story; no employer named.
 - **Jason:** okay already given for LinkedIn; a courtesy note listing the four placements is drafted in Gmail.
-- **Forms:** two Microsoft Forms, one per lane, built and embedded. No Formspree.
+- **Forms:** two Microsoft Forms, one per lane. The nonprofit form asks exactly the Service Offer's ten questions, nothing more.
 
 ## Still open
 
