@@ -44,104 +44,14 @@
     </section>
     <section class="section">
       <div class="container">
-        <div id="thanks" class="note hidden" style="max-width:760px;"><strong>Thank you.</strong> Your request is in. Matthew will reply within one business day with the secure folder for your files and what happens next. Nothing else is required of you today.</div>
-        <form class="form" id="tryform" onsubmit="return esSubmit(this,'FORM_ENDPOINT_TRY','Try it first — request from the website','Thank you.')" novalidate>
-          <input type="text" name="_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <fieldset>
-            <legend>You</legend>
-            <div class="row">
-              <div><label for="name">Your name</label><input id="name" name="Name" type="text" required autocomplete="name"></div>
-              <div><label for="role">Your role</label><input id="role" name="Role" type="text" placeholder="Founder · CEO · Executive Director · Treasurer" required></div>
-            </div>
-            <div class="row">
-              <div><label for="email">Work email</label><input id="email" name="Email" type="email" required autocomplete="email"></div>
-              <div><label for="org">Organization</label><input id="org" name="Organization" type="text" required autocomplete="organization"></div>
-            </div>
-            <label for="web">Website <span class="why">Optional — it helps us read your organization before we write back.</span></label><input id="web" name="Website" type="url" placeholder="https://">
-          </fieldset>
-
-          <fieldset>
-            <legend>Your organization</legend>
-            <label>Which describes you?</label>
-            <div class="choices">
-              <label><input type="radio" name="Lane" value="Founder or operating company" required onchange="esShow('.np-only',false);esShow('.fo-only',true)"> Founder or operating company</label>
-              <label><input type="radio" name="Lane" value="Nonprofit or association" onchange="esShow('.np-only',true);esShow('.fo-only',false)"> Nonprofit or association</label>
-            </div>
-            <div class="np-only hidden">
-              <label>Tax status</label>
-              <div class="choices">
-                <label><input type="radio" name="Tax_status" value="501(c)(3)"> 501(c)(3)</label>
-                <label><input type="radio" name="Tax_status" value="501(c)(6)"> 501(c)(6)</label>
-                <label><input type="radio" name="Tax_status" value="501(c)(4)"> 501(c)(4)</label>
-                <label><input type="radio" name="Tax_status" value="Other or not sure"> Other / not sure</label>
-              </div>
-              <label for="budget">Annual budget, roughly</label>
-              <select id="budget" name="Annual_budget"><option value="">Select</option><option>Under $1 million</option><option>$1–2 million</option><option>$2–5 million</option><option>Over $5 million</option></select>
-              <label>How often does the board meet?</label>
-              <div class="choices">
-                <label><input type="radio" name="Board_cadence" value="Monthly"> Monthly</label>
-                <label><input type="radio" name="Board_cadence" value="Every two months"> Every two months</label>
-                <label><input type="radio" name="Board_cadence" value="Quarterly"> Quarterly</label>
-                <label><input type="radio" name="Board_cadence" value="Other"> Other</label>
-              </div>
-              <label for="fye">Fiscal year end</label>
-              <select id="fye" name="Fiscal_year_end"><option value="">Select month</option><option>December</option><option>June</option><option>September</option><option>March</option><option>Other</option></select>
-              <label for="events">Do you run events with signed venue contracts (conference, annual meeting)?</label>
-              <select id="events" name="Events_with_contracts"><option value="">Select</option><option>Yes — one</option><option>Yes — more than one</option><option>No</option></select>
-            </div>
-            <div class="fo-only hidden">
-              <label for="answers">Who do you answer to?</label>
-              <select id="answers" name="Answers_to"><option value="">Select</option><option>A bank or lender</option><option>Investors</option><option>A board</option><option>More than one of these</option><option>Just myself, for now</option></select>
-              <label for="entities">Entities</label>
-              <select id="entities" name="Entities"><option value="">Select</option><option>One</option><option>Two or three</option><option>Four or more</option></select>
-            </div>
-            <label for="acct">Accounting system</label>
-            <select id="acct" name="Accounting_system" required><option value="">Select</option><option>QuickBooks Online</option><option>QuickBooks Desktop</option><option>Xero</option><option>NetSuite</option><option>Sage Intacct</option><option>Other</option></select>
-            <label for="ask">What does your board, bank or investor ask for most — and what do they get today? <span class="why">A sentence or two is plenty.</span></label>
-            <textarea id="ask" name="What_they_ask_for"></textarea>
-            <label for="heard">How did you find us?</label>
-            <select id="heard" name="How_you_found_us"><option value="">Select</option><option>A Board-Ready Session on LinkedIn</option><option>The Board-Ready Brief</option><option>A referral or introduction</option><option>An event</option><option>Search</option><option>Other</option></select>
-          </fieldset>
-
-          <label class="consent"><input type="checkbox" name="Consent" value="Yes" required> <span>I understand that no files are uploaded here, that Matthew will reply by email with a secure folder for my files, and that the sample packet is for my organization's own evaluation. I have read the <a href="../pages/privacy.html">Privacy Policy</a>.</span></label>
-          <div class="actions">
-            <button type="submit" class="btn btn--primary btn--lg">Request my sample packet</button>
-            <span class="status">One business day to a reply. No commitment.</span>
-          </div>
-        </form>
+        <div class="form">
+          <p class="note" style="margin-bottom: var(--space-6);"><strong>Three minutes, no files.</strong> The form asks who you are, who you answer to, how your board meets and what it asks for. Matthew reads every submission himself and replies within one business day with the secure folder for your files.</p>
+          <iframe id="try-form" title="Try it first — tell us about your organization" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUQVZLRjI1NVYzUE5CU0M4R0RRSDFNWTZZVi4u&amp;embed=true" width="100%" height="1500" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 760px; height: 1500px; border-radius: var(--radius-lg); background: var(--color-white);" allowfullscreen></iframe>
+          <p class="text-sm text-secondary" style="margin-top: var(--space-4);">If the form does not appear above, <a href="#" data-link="TRY_FORM_URL" data-subject="Try it first — request from the website">open it in its own window</a>, or write to <a href="mailto:info@engermansolutions.com?subject=Try%20it%20first">info@engermansolutions.com</a> with your name, organization and accounting system — that is enough to start.</p>
+          <p class="text-sm text-secondary">By submitting, you understand that no files are uploaded here, that Matthew will reply by email with a secure folder for your files, and that the sample packet is for your organization's own evaluation. <a href="../pages/privacy.html">Privacy Policy</a>.</p>
+        </div>
       </div>
     </section>
-
-<script>
-(function(){
-  function serialize(form){
-    var o={}; new FormData(form).forEach(function(v,k){ if(o[k]!==undefined){ o[k]=[].concat(o[k],v);} else {o[k]=v;} }); return o;
-  }
-  function asText(o,title){
-    var lines=[title,'',''];
-    Object.keys(o).forEach(function(k){ if(k==='_hp'||k==='_subject') return; var v=o[k]; if(Array.isArray(v)) v=v.join(', '); if(String(v).trim()==='') return; lines.push(k.replace(/_/g,' ')+': '+v); });
-    return lines.join('\n');
-  }
-  window.esSubmit=function(form,endpointKey,subject,thanks){
-    var status=form.querySelector('.status'); var btn=form.querySelector('button[type=submit]');
-    if(form.querySelector('[name=_hp]').value){ return false; }
-    if(!form.reportValidity()) return false;
-    var data=serialize(form); data._subject=subject; var endpoint=(window.ES_CONFIG||{})[endpointKey];
-    btn.disabled=true; status.textContent='Sending…';
-    if(endpoint){
-      fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-        .then(function(r){ if(!r.ok) throw new Error(r.status); form.classList.add('hidden'); document.getElementById('thanks').classList.remove('hidden'); window.scrollTo({top:0,behavior:'smooth'}); })
-        .catch(function(){ status.textContent='That did not go through. Opening your email instead…'; mailto(); });
-    } else { mailto(); }
-    function mailto(){
-      var body=asText(data,subject); var href='mailto:'+((window.ES_CONFIG||{}).CONTACT_EMAIL||'info@engermansolutions.com')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      window.location.href=href; status.textContent='Your email app has opened with your answers filled in — press Send there. '+thanks; btn.disabled=false;
-    }
-    return false;
-  };
-  window.esShow=function(sel,on){ document.querySelectorAll(sel).forEach(function(el){ el.classList.toggle('hidden',!on); el.querySelectorAll('input,select,textarea').forEach(function(i){ i.disabled=!on; }); }); };
-})();
-</script>
   </main>
   <footer class="footer" role="contentinfo">
     <div class="container">
