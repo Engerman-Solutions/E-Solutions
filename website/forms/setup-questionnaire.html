@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Setup Questionnaire — Engerman Solutions</title>
+  <meta name="description" content="The one-time, ten-question setup questionnaire for nonprofit and association clients.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-tokens.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/remaster.css">
+  <script src="../js/site-config.js"></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Engerman Solutions — Home">
+        <img src="../img/engerman-logo.svg" alt="Engerman Solutions" height="40">
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" id="nav-links" role="menubar">
+          <li role="none"><a href="../pages/how-we-work.html" role="menuitem">How We Work</a></li><li role="none"><a href="../pages/founders.html" role="menuitem">For Founders</a></li><li role="none"><a href="../pages/nonprofits.html" role="menuitem">For Nonprofits</a></li><li role="none"><a href="../pages/sessions.html" role="menuitem">Sessions &amp; Brief</a></li><li role="none"><a href="../pages/about.html" role="menuitem">About</a></li>
+          <li role="none"><a href="../forms/try-it-first.html" class="nav__cta" role="menuitem">Try it first</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="sq-heading">
+      <div class="container">
+        <p class="overline">Nonprofits &amp; associations · onboarding</p>
+        <h1 id="sq-heading">One-time setup questionnaire — ten questions, answered once.</h1>
+        <p class="lead">About ten minutes. Some answers take a minute; a few need looking up. Answer what you can and leave the rest — we fill it from the ledger and your Form 990, and your onboarding walk-through covers anything unclear. No files are uploaded here; the ledger, budget and contracts go to your secure workspace folder.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div id="thanks" class="note hidden" style="max-width:760px;"><strong>Received — thank you.</strong> Your answers are with Matthew. The next things you will see are the completeness note within one business day and your onboarding walk-through invitation.</div>
+        <form class="form" id="sqform" onsubmit="return esSubmit(this,'FORM_ENDPOINT_SETUP','Setup questionnaire — submitted from the website','Thank you.')" novalidate>
+          <input type="text" name="_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset><legend>Who is answering</legend>
+            <div class="row"><div><label for="p_name">Your name and role</label><input id="p_name" name="Answered_by" type="text" required placeholder="Jane Doe, Executive Director"></div><div><label for="p_email">Email</label><input id="p_email" name="Email" type="email" required></div></div>
+          </fieldset>
+
+          <fieldset><legend>1 · Legal name and tax status <span class="why">Why we ask: functional columns, donor restrictions, Schedules A and B, lobbying notices.</span></legend>
+            <label for="q1_name">Legal name of the organization</label><input id="q1_name" name="Q1_Legal_name" type="text" required>
+            <label>Tax status</label>
+            <div class="choices">
+              <label><input type="radio" name="Q1_Tax_status" value="501(c)(3)" required onchange="esShow('.c3',true);esShow('.c6',false)"> 501(c)(3)</label>
+              <label><input type="radio" name="Q1_Tax_status" value="501(c)(6)" onchange="esShow('.c3',false);esShow('.c6',true)"> 501(c)(6)</label>
+              <label><input type="radio" name="Q1_Tax_status" value="501(c)(4)" onchange="esShow('.c3',true);esShow('.c6',true)"> 501(c)(4)</label>
+            </div>
+            <div class="c6 hidden"><label for="q1_lobby">Do you report lobbying or political activity to members (the nondeductibility notice)? <span class="why">(c)(6) and (c)(4) only.</span></label><select id="q1_lobby" name="Q1_Lobbying_notice"><option value="">Select</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+            <label for="q1_990">Is your Form 990 posted publicly, or available on request only?</label><select id="q1_990" name="Q1_Form_990"><option value="">Select</option><option>Posted publicly — pull it</option><option>On request only — we will send it</option><option>Not sure</option></select>
+          </fieldset>
+
+          <fieldset><legend>2 · Fiscal year end <span class="why">Sets the months, the prior-year comparison and the filing calendar.</span></legend>
+            <label for="q2">Fiscal year ends on</label><select id="q2" name="Q2_Fiscal_year_end" required><option value="">Select month</option><option>January 31</option><option>February 28</option><option>March 31</option><option>April 30</option><option>May 31</option><option>June 30</option><option>July 31</option><option>August 31</option><option>September 30</option><option>October 31</option><option>November 30</option><option>December 31</option></select>
+          </fieldset>
+
+          <fieldset><legend>3 · Board and finance committee dates for the year <span class="why">We work backward from each meeting to your intake and delivery dates.</span></legend>
+            <label for="q3_board">Board meeting dates (or the pattern — e.g., third Thursday, every other month)</label><textarea id="q3_board" name="Q3_Board_dates" required></textarea>
+            <label for="q3_fin">Finance committee dates, if it meets separately</label><textarea id="q3_fin" name="Q3_Finance_committee_dates"></textarea>
+            <label for="q3_events">Events with signed venue contracts this year <span class="why">Name, dates, venue — the signed contract itself goes to your workspace folder; it drives the cancellation and attrition cases.</span></label><textarea id="q3_events" name="Q3_Events_with_contracts"></textarea>
+          </fieldset>
+
+          <fieldset><legend>4 · Who approves the packet, and who receives it? <span class="why">Who approves entries, who accepts the memo, who receives cash alerts.</span></legend>
+            <label for="q4_approver">Named approver for adjusting entries (Controller, Treasurer, or your engaged accountant)</label><input id="q4_approver" name="Q4_Entry_approver" type="text" required placeholder="Name, role, email">
+            <label for="q4_accept">Who accepts the packet (usually the CEO or Executive Director)</label><input id="q4_accept" name="Q4_Accepts_packet" type="text" required placeholder="Name, role, email">
+            <label for="q4_cash">Who receives the monthly cash alert (usually the Treasurer)</label><input id="q4_cash" name="Q4_Cash_alert_recipient" type="text" placeholder="Name, role, email">
+            <label for="q4_route">Departments that should receive their own tab (events, membership, education, bookkeeper) — names optional</label><textarea id="q4_route" name="Q4_Department_routing"></textarea>
+          </fieldset>
+
+          <fieldset><legend>5 · Cash or accrual? Date of the last bank reconciliation? <span class="why">We rely on your reconciled books and say so; a cash-basis memo is labeled as such.</span></legend>
+            <div class="choices"><label><input type="radio" name="Q5_Basis" value="Accrual" required> Accrual</label><label><input type="radio" name="Q5_Basis" value="Cash"> Cash</label><label><input type="radio" name="Q5_Basis" value="Modified cash"> Modified cash</label></div>
+            <div class="row"><div><label for="q5_date">Last bank reconciliation completed</label><input id="q5_date" name="Q5_Last_reconciliation" type="date"></div><div><label for="q5_who">Who closes the books each month</label><input id="q5_who" name="Q5_Bookkeeper" type="text" placeholder="Name or firm"></div></div>
+          </fieldset>
+
+          <fieldset class="c3 hidden"><legend>6 · Donor-restricted grants or gifts <span class="why">Restricted money is reported separately and released as its purpose is met. Skip if your ledger already tracks restrictions by class.</span></legend>
+            <label>Are restrictions tracked by class in the ledger?</label>
+            <div class="choices"><label><input type="radio" name="Q6_Tracked_by_class" value="Yes"> Yes</label><label><input type="radio" name="Q6_Tracked_by_class" value="No"> No</label><label><input type="radio" name="Q6_Tracked_by_class" value="Not sure"> Not sure</label></div>
+            <label for="q6">If not, list each restricted grant or gift: funder, amount, purpose, period</label><textarea id="q6" name="Q6_Restricted_funds"></textarea>
+          </fieldset>
+
+          <fieldset><legend>7 · Reserve policy <span class="why">Sets the floor the memo measures cash against, and the reserve test.</span></legend>
+            <div class="row"><div><label for="q7_amt">Board-designated reserve today ($)</label><input id="q7_amt" name="Q7_Designated_reserve" type="text" inputmode="numeric"></div><div><label for="q7_months">Target, in months of expenses</label><input id="q7_months" name="Q7_Target_months" type="text" inputmode="numeric" placeholder="e.g., 3"></div></div>
+            <label for="q7_floor">Cash floor the board would not want to go below ($), if one is set</label><input id="q7_floor" name="Q7_Cash_floor" type="text" inputmode="numeric">
+            <label for="q7_policy">Reserve policy wording, if you have one (paste or summarize)</label><textarea id="q7_policy" name="Q7_Policy_text"></textarea>
+          </fieldset>
+
+          <fieldset><legend>8 · Program list <span class="why">Program results and full cost follow the way your board thinks about the organization.</span></legend>
+            <label for="q8">List your programs the way the board talks about them (membership, annual conference, education and certification, advocacy, publications…)</label><textarea id="q8" name="Q8_Program_list" required></textarea>
+          </fieldset>
+
+          <fieldset><legend>9 · Monthly spread of the budget <span class="why">Only if your budget is annual. Confirms the seasonal plan the variance is measured against.</span></legend>
+            <label>Is the board-approved budget spread by month?</label>
+            <div class="choices"><label><input type="radio" name="Q9_Spread" value="Yes, by month"> Yes, by month</label><label><input type="radio" name="Q9_Spread" value="Annual only"> Annual only — spread it on our calendar</label><label><input type="radio" name="Q9_Spread" value="Not sure"> Not sure</label></div>
+            <label for="q9">Seasonality we should know about (when dues renew, when the conference is recognized, when grants land)</label><textarea id="q9" name="Q9_Seasonality"></textarea>
+          </fieldset>
+
+          <fieldset><legend>10 · Anything your board asks to see regularly <span class="why">Optional. We build it into the Board Brief so the packet answers it before it is asked.</span></legend>
+            <textarea id="q10" name="Q10_Board_asks_for" placeholder="Membership counts, renewal rate, conference pacing, days of cash…"></textarea>
+          </fieldset>
+
+          <fieldset><legend>Membership and learning systems <span class="why">Optional upgrade: unlocks membership and education KPIs and conference pacing.</span></legend>
+            <div class="row"><div><label for="ams">Membership system (AMS), if any</label><input id="ams" name="Membership_system" type="text"></div><div><label for="lms">Learning system (LMS), if any</label><input id="lms" name="Learning_system" type="text"></div></div>
+            <label for="booths">Do signed booth and sponsorship contracts post to the ledger when signed, or when paid?</label><select id="booths" name="Booth_contracts_post"><option value="">Select</option><option>When signed</option><option>When paid</option><option>Not sure</option></select>
+          </fieldset>
+
+          <label class="consent"><input type="checkbox" name="Consent" value="Yes" required> <span>These answers are accurate to the best of my knowledge. I understand the ledger, budget and contracts go to our secure workspace folder, not this form, and that tax items are screened, not decided.</span></label>
+          <div class="actions">
+            <button type="submit" class="btn btn--primary btn--lg">Submit the questionnaire</button>
+            <button type="button" class="btn btn--secondary" onclick="window.print()">Print or save a copy</button>
+            <span class="status">Takes about ten minutes.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+<script>
+(function(){
+  function serialize(form){
+    var o={}; new FormData(form).forEach(function(v,k){ if(o[k]!==undefined){ o[k]=[].concat(o[k],v);} else {o[k]=v;} }); return o;
+  }
+  function asText(o,title){
+    var lines=[title,'',''];
+    Object.keys(o).forEach(function(k){ if(k==='_hp'||k==='_subject') return; var v=o[k]; if(Array.isArray(v)) v=v.join(', '); if(String(v).trim()==='') return; lines.push(k.replace(/_/g,' ')+': '+v); });
+    return lines.join('\n');
+  }
+  window.esSubmit=function(form,endpointKey,subject,thanks){
+    var status=form.querySelector('.status'); var btn=form.querySelector('button[type=submit]');
+    if(form.querySelector('[name=_hp]').value){ return false; }
+    if(!form.reportValidity()) return false;
+    var data=serialize(form); data._subject=subject; var endpoint=(window.ES_CONFIG||{})[endpointKey];
+    btn.disabled=true; status.textContent='Sending…';
+    if(endpoint){
+      fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){ if(!r.ok) throw new Error(r.status); form.classList.add('hidden'); document.getElementById('thanks').classList.remove('hidden'); window.scrollTo({top:0,behavior:'smooth'}); })
+        .catch(function(){ status.textContent='That did not go through. Opening your email instead…'; mailto(); });
+    } else { mailto(); }
+    function mailto(){
+      var body=asText(data,subject); var href='mailto:'+((window.ES_CONFIG||{}).CONTACT_EMAIL||'info@engermansolutions.com')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      window.location.href=href; status.textContent='Your email app has opened with your answers filled in — press Send there. '+thanks; btn.disabled=false;
+    }
+    return false;
+  };
+  window.esShow=function(sel,on){ document.querySelectorAll(sel).forEach(function(el){ el.classList.toggle('hidden',!on); el.querySelectorAll('input,select,textarea').forEach(function(i){ i.disabled=!on; }); }); };
+})();
+</script>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="nav__logo" style="color: var(--color-white);">
+            <img src="../img/engerman-logo-inverted.svg" alt="Engerman Solutions" height="32">
+          </a>
+          <p>A tech-enabled financial service. Your finance department, delivered — the reporting a board expects, without the hire it usually takes.</p>
+          <p style="margin-top: var(--space-2);"><a href="mailto:info@engermansolutions.com" style="color: var(--color-gray-300);">info@engermansolutions.com</a></p>
+          <p class="footer__tag">Decisions, with precision.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="../pages/how-we-work.html">How We Work</a></li>
+            <li><a href="../pages/founders.html">For Founders &amp; Operating Companies</a></li>
+            <li><a href="../pages/nonprofits.html">For Nonprofits &amp; Associations</a></li>
+            <li><a href="../forms/try-it-first.html">Try it first</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Proof</h4>
+          <ul>
+            <li><a href="../pages/sessions.html">Board-Ready Sessions</a></li>
+            <li><a href="../pages/sessions.html#brief">The Board-Ready Brief</a></li>
+            <li><a href="../downloads/Engerman_Solutions_Sample_Board_Brief_Nonprofit.pdf">Sample Board Brief (PDF)</a></li>
+            <li><a href="../pages/how-we-work.html#data">How we handle your data</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/privacy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Website Terms</a></li>
+            <li><a href="mailto:info@engermansolutions.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 E-Solutions Consulting, LLC, doing business as Engerman Solutions. All rights reserved.</span>
+        <span>Not bookkeeping. Not an audit, review or attestation. Not tax advice.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
