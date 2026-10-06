@@ -5,7 +5,8 @@ window.ES_CONFIG = {
   LINKEDIN_MATTHEW_URL: "https://www.linkedin.com/in/matthew-a-engerman-25b17a46",
   BRIEF_SUBSCRIBE_URL: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7477941237455491072",
   CALENDAR_URL: "",                // a booking link if you want one; otherwise email
-  TRY_FORM_URL: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUQVZLRjI1NVYzUE5CU0M4R0RRSDFNWTZZVi4u", // the Microsoft Form behind "Try it first" (embedded on forms/try-it-first.html; this link opens it in its own window)
+  TRY_FORM_FOUNDERS_URL: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNjA3SExCVVRJTE80NVNJM0JWTEhZV1pQSC4u", // Microsoft Form: Try it first — Founders & Operating Companies
+  TRY_FORM_NONPROFITS_URL: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNkxOU0RLQUJGMFpTWk1WRzNPWEdROVNPTC4u", // Microsoft Form: Try it first — Nonprofits & Associations
   FORM_ENDPOINT_SETUP: "",         // Setup Questionnaire: leave blank and the page opens the client's email app with the answers written; or build it as a second Microsoft Form and link to it instead
   CONTACT_EMAIL: "info@engermansolutions.com"
 };

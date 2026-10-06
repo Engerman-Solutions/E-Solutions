@@ -38,20 +38,40 @@
     <section class="page-hero" aria-labelledby="tf-heading">
       <div class="container">
         <p class="overline">Try it first</p>
-        <h1 id="tf-heading">See your own numbers in a board-ready packet — before you decide anything.</h1>
-        <p class="lead">Founders: two files, within 48 hours, on us. Nonprofits and associations: a quarter your board has already seen, rebuilt as a three-page Board Brief, at no fee. Tell us a little about your organization; Matthew replies personally within one business day with the secure folder for your files. No file is uploaded here.</p>
+        <h1 id="tf-heading">See your own numbers in a board-ready packet &mdash; before you decide anything.</h1>
+        <p class="lead">Choose your door. Founders and operating companies: two files, within 48 hours, on us. Nonprofits and associations: a quarter your board has already seen, rebuilt as a three-page Board Brief, at no fee. About three minutes either way; no file is uploaded here. Matthew replies personally within one business day with the secure folder for your files.</p>
+        <div class="lane-switch" role="tablist" aria-label="Choose your lane">
+          <button type="button" class="lane-tab" role="tab" id="tab-founders" aria-controls="panel-founders" aria-selected="true" data-lane="founders">Founders &amp; operating companies</button>
+          <button type="button" class="lane-tab" role="tab" id="tab-nonprofits" aria-controls="panel-nonprofits" aria-selected="false" data-lane="nonprofits">Nonprofits &amp; associations</button>
+        </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="form">
-          <p class="note" style="margin-bottom: var(--space-6);"><strong>Three minutes, no files.</strong> The form asks who you are, who you answer to, how your board meets and what it asks for. Matthew reads every submission himself and replies within one business day with the secure folder for your files.</p>
-          <iframe id="try-form" title="Try it first — tell us about your organization" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUQVZLRjI1NVYzUE5CU0M4R0RRSDFNWTZZVi4u&amp;embed=true" width="100%" height="1500" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 760px; height: 1500px; border-radius: var(--radius-lg); background: var(--color-white);" allowfullscreen></iframe>
-          <p class="text-sm text-secondary" style="margin-top: var(--space-4);">If the form does not appear above, <a href="#" data-link="TRY_FORM_URL" data-subject="Try it first — request from the website">open it in its own window</a>, or write to <a href="mailto:info@engermansolutions.com?subject=Try%20it%20first">info@engermansolutions.com</a> with your name, organization and accounting system — that is enough to start.</p>
-          <p class="text-sm text-secondary">By submitting, you understand that no files are uploaded here, that Matthew will reply by email with a secure folder for your files, and that the sample packet is for your organization's own evaluation. <a href="../pages/privacy.html">Privacy Policy</a>.</p>
+          <div id="panel-founders" class="lane-panel" role="tabpanel" aria-labelledby="tab-founders">
+            <p class="note" style="margin-bottom: var(--space-6);"><strong>Two files, within 48 hours, on us.</strong> Send last month's ledger export and your approved budget; we return a signed, board-ready variance memo. The form asks who you answer to, your accounting system and what they ask for most &mdash; nothing more.</p>
+            <iframe title="Try it first — Founders &amp; Operating Companies" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNjA3SExCVVRJTE80NVNJM0JWTEhZV1pQSC4u&amp;embed=true" width="100%" height="1600" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 760px; height: 1600px; border-radius: var(--radius-lg); background: var(--color-white);" allowfullscreen loading="lazy"></iframe>
+            <p class="text-sm text-secondary" style="margin-top: var(--space-4);">If the form does not appear, <a href="#" data-link="TRY_FORM_FOUNDERS_URL" data-subject="Try it first — founders">open it in its own window</a>.</p>
+          </div>
+          <div id="panel-nonprofits" class="lane-panel hidden" role="tabpanel" aria-labelledby="tab-nonprofits">
+            <p class="note" style="margin-bottom: var(--space-6);"><strong>A quarter your board has already seen, rebuilt as a Board Brief.</strong> You compare it with what your board actually received. The form asks about your tax status, your board's calendar and who closes the books &mdash; the things that shape the Brief.</p>
+            <iframe title="Try it first — Nonprofits &amp; Associations" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCp6pTf0lUWjidw_pJ41r8VK0JU18xlOmM5bOtgsLdhUNkxOU0RLQUJGMFpTWk1WRzNPWEdROVNPTC4u&amp;embed=true" width="100%" height="1900" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 760px; height: 1900px; border-radius: var(--radius-lg); background: var(--color-white);" allowfullscreen loading="lazy"></iframe>
+            <p class="text-sm text-secondary" style="margin-top: var(--space-4);">If the form does not appear, <a href="#" data-link="TRY_FORM_NONPROFITS_URL" data-subject="Try it first — nonprofits">open it in its own window</a>.</p>
+          </div>
+          <p class="text-sm text-secondary" style="margin-top: var(--space-6);">Prefer email? Write to <a href="mailto:info@engermansolutions.com?subject=Try%20it%20first">info@engermansolutions.com</a> with your name, organization and accounting system &mdash; that is enough to start. By submitting either form, you understand that no files are uploaded here, that Matthew will reply by email with a secure folder for your files, and that the sample packet is for your organization's own evaluation. <a href="../pages/privacy.html">Privacy Policy</a>.</p>
         </div>
       </div>
     </section>
+    <script>
+    (function(){
+      var tabs=document.querySelectorAll('.lane-tab'), panels={founders:document.getElementById('panel-founders'),nonprofits:document.getElementById('panel-nonprofits')};
+      function show(lane){ tabs.forEach(function(t){ var on=t.getAttribute('data-lane')===lane; t.setAttribute('aria-selected',on?'true':'false'); }); Object.keys(panels).forEach(function(k){ panels[k].classList.toggle('hidden',k!==lane); }); }
+      tabs.forEach(function(t){ t.addEventListener('click',function(){ show(t.getAttribute('data-lane')); history.replaceState(null,'','#'+t.getAttribute('data-lane')); }); });
+      var h=(location.hash||'').replace('#',''); show(h==='nonprofits'?'nonprofits':'founders');
+      window.addEventListener('hashchange',function(){ var h=(location.hash||'').replace('#',''); if(panels[h]) show(h); });
+    })();
+    </script>
   </main>
   <footer class="footer" role="contentinfo">
     <div class="container">

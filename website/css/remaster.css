@@ -79,5 +79,9 @@
 .cmp td:first-child { font-weight: var(--weight-medium); color: var(--color-navy-800); }
 .cmp .ok { color: var(--color-green-600); font-weight: var(--weight-bold); }
 .cmp .no { color: var(--color-gray-400); }
+.lane-switch { display:flex; gap: var(--space-2); margin-top: var(--space-6); flex-wrap: wrap; }
+.lane-tab { font: inherit; font-size: var(--text-sm); font-weight: var(--weight-semibold); padding: var(--space-3) var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-white); color: var(--color-navy-800); cursor: pointer; }
+.lane-tab[aria-selected="true"] { background: var(--color-navy-800); color: var(--color-white); border-color: var(--color-navy-800); }
+.lane-tab:focus-visible { outline: 2px solid var(--color-blue-500); outline-offset: 2px; }
 @media (max-width: 1024px) { .kv { grid-template-columns: repeat(2,1fr);} .steps { grid-template-columns: repeat(2,1fr);} }
 @media (max-width: 768px) { .doors, .layers, .cadence, .two-col, .form .row { grid-template-columns: 1fr; } .kv, .steps { grid-template-columns: 1fr; } }
