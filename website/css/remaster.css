@@ -92,6 +92,7 @@
 @media (max-width: 768px) { .nav__links .nav__cta { padding: 12px 16px; margin-top: var(--space-2); text-align: center; } }
 /* Embedded Microsoft Forms: tall enough that nothing scrolls inside the frame */
 .embed-form { display: block; border: none; width: 100%; max-width: 760px; border-radius: var(--radius-lg); background: var(--color-white); }
-.embed-form--founders { height: 3700px; }
-.embed-form--nonprofits { height: 3300px; }
-@media (max-width: 480px) { .embed-form--founders { height: 4000px; } .embed-form--nonprofits { height: 3700px; } }
+.embed-form--founders { height: 3400px; }
+.embed-form--nonprofits { height: 2950px; }
+@media (max-width: 640px) { .embed-form--founders { height: 3550px; } .embed-form--nonprofits { height: 3150px; } }
+@media (max-width: 480px) { .embed-form--founders { height: 3750px; } .embed-form--nonprofits { height: 3450px; } }
