@@ -2,8 +2,8 @@
 // Fill these in once; every page reads them. Anything left blank falls back to email so nothing on the site is a dead link.
 window.ES_CONFIG = {
   LINKEDIN_COMPANY_URL: "",        // e.g. https://www.linkedin.com/company/engerman-solutions
-  LINKEDIN_MATTHEW_URL: "",        // Matthew's profile (the Sessions post from here)
-  BRIEF_SUBSCRIBE_URL: "",         // The Board-Ready Brief subscribe link
+  LINKEDIN_MATTHEW_URL: "https://www.linkedin.com/in/matthew-a-engerman-25b17a46",
+  BRIEF_SUBSCRIBE_URL: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7477941237455491072",
   CALENDAR_URL: "",                // a booking link if you want one; otherwise email
   FORM_ENDPOINT_TRY: "",           // Formspree / Tally / Apps Script endpoint for the Try-it-first form (POST)
   FORM_ENDPOINT_SETUP: "",         // endpoint for the Setup Questionnaire (POST)

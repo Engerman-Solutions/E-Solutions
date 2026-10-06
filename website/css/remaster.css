@@ -66,5 +66,18 @@
 .legal h2 { font-size: var(--text-xl); margin: var(--space-8) 0 var(--space-3); }
 .legal p, .legal li { color: var(--color-gray-700); }
 .legal ul { padding-left: var(--space-6); margin-bottom: var(--space-4); }
+/* Founders pricing: four tiers + what-you-get table */
+.pricing-grid--founders .pricing-card--featured::before { content: 'Recommended'; }
+.pricing-grid--founders .pricing-card__amount { font-size: var(--text-2xl); }
+.pricing-grid--founders .pricing-card__features li { font-size: var(--text-sm); }
+.cmp-wrap { overflow-x: auto; }
+.cmp { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.cmp th, .cmp td { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-gray-200); text-align: center; vertical-align: top; }
+.cmp th:first-child, .cmp td:first-child { text-align: left; }
+.cmp th { font-weight: var(--weight-semibold); color: var(--color-navy-800); background: var(--color-gray-50); }
+.cmp th.cmp__featured { background: var(--color-blue-50); color: var(--color-blue-700); }
+.cmp td:first-child { font-weight: var(--weight-medium); color: var(--color-navy-800); }
+.cmp .ok { color: var(--color-green-600); font-weight: var(--weight-bold); }
+.cmp .no { color: var(--color-gray-400); }
 @media (max-width: 1024px) { .kv { grid-template-columns: repeat(2,1fr);} .steps { grid-template-columns: repeat(2,1fr);} }
 @media (max-width: 768px) { .doors, .layers, .cadence, .two-col, .form .row { grid-template-columns: 1fr; } .kv, .steps { grid-template-columns: 1fr; } }
