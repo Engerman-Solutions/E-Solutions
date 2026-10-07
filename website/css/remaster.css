@@ -93,3 +93,15 @@
 /* Embedded Microsoft Forms: a viewport-height frame that scrolls inside itself, so the confirmation after Submit appears where the visitor is looking */
 .embed-form { display: block; border: 1px solid var(--color-border); width: 100%; max-width: 760px; height: 82vh; min-height: 600px; max-height: 1000px; border-radius: var(--radius-lg); background: var(--color-white); }
 @media (max-width: 480px) { .embed-form { height: 78vh; min-height: 520px; } }
+/* Sample memo page — mirrors the sample PDF's tables and status labels */
+.badge--red { background: var(--color-red-100); color: var(--color-red-600); }
+.memo-meta { display: grid; grid-template-columns: max-content 1fr max-content 1fr; gap: var(--space-2) var(--space-5); font-size: var(--text-sm); margin: 0 0 var(--space-6); }
+.memo-meta dt { font-weight: var(--weight-semibold); color: var(--color-navy-800); }
+.memo-meta dd { margin: 0; color: var(--color-text-secondary); }
+.memo-driver { margin-bottom: var(--space-5); }
+.memo-driver .eyebrow { color: var(--color-navy-800); letter-spacing: .04em; text-transform: none; font-size: var(--text-sm); }
+.memo-driver ul { margin: 0; }
+.memo-table { min-width: 560px; }
+.table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.memo-source { font-size: var(--text-xs); color: var(--color-text-secondary); font-style: italic; margin-top: var(--space-3); }
+@media (max-width: 768px) { .memo-meta { grid-template-columns: max-content 1fr; } }
