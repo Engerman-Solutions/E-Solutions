@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sample Variance Memo — Engerman Solutions</title>
-  <meta name="description" content="A board-ready monthly variance memo for a fictional company — what changed, why, the risks that matter and the recommended actions — the way a lender, an investor or a board reads it in five minutes.">
+  <meta name="description" content="A board-ready monthly variance memo for a fictional mid-market SaaS company — what changed, why, the risks that matter and the recommended actions — the way a lender, an investor or a board reads it in five minutes.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
       <div class="container">
         <p class="overline">Sample memo &middot; founders &amp; operating companies</p>
         <h1 id="so-heading">A monthly variance memo, the way a board reads it.</h1>
-        <p class="lead">Below is the memo for a fictional company &mdash; NovaCRM, Inc., February 2026 &mdash; built from its ledger export and its approved budget, exactly as a client receives it. Read it in five minutes: what changed, why, the risks that matter and what to do next. Every figure ties to the budget framework workbook that comes with it.</p>
+        <p class="lead">Below is the memo for a fictional company &mdash; Summit Analytics, Inc., May 2026 &mdash; built from its ledger export and its approved budget, exactly as a client receives it. It is the same memo as the PDF, page for page. Read it in five minutes: what changed, why, the risks that matter and what to do next. Every figure ties to the variance workbook that comes with it.</p>
         <div class="hero__ctas">
           <a href="../forms/try-it-first.html#founders" class="btn btn--primary btn--lg">Two files, within 48 hours, on us</a>
           <a href="../downloads/Engerman_Solutions_Sample_Variance_Memo_Founders.pdf" class="btn btn--secondary btn--lg">Download a sample memo (PDF)</a>
@@ -51,92 +51,156 @@
     <section class="section" aria-labelledby="so-memo">
       <div class="container container--narrow">
         <div class="card" style="padding: var(--space-8);">
-          <div style="display:flex; flex-wrap:wrap; gap: var(--space-3); align-items:center; justify-content:space-between; margin-bottom: var(--space-6);">
+          <div style="display:flex; flex-wrap:wrap; gap: var(--space-3); align-items:center; justify-content:space-between; margin-bottom: var(--space-5);">
             <div>
-              <p class="eyebrow" style="margin-bottom: var(--space-1);">Monthly variance memorandum</p>
-              <h2 id="so-memo" style="font-size: var(--text-2xl); margin: 0;">NovaCRM, Inc. &mdash; February 2026</h2>
+              <p class="eyebrow" style="margin-bottom: var(--space-1);">Monthly variance memo &mdash; May 2026</p>
+              <h2 id="so-memo" style="font-size: var(--text-2xl); margin: 0;">Prepared for the Board of Directors of Summit Analytics, Inc.</h2>
+              <p class="text-sm text-secondary" style="margin: var(--space-1) 0 0;">May 1 &ndash; May 31, 2026</p>
             </div>
-            <span class="badge badge--green">Reviewed &middot; Signed &middot; Final</span>
+            <span class="badge badge--green">Approved &middot; Delivered</span>
           </div>
+
+          <dl class="memo-meta">
+            <dt>Period (month-end)</dt><dd>May 1 &ndash; May 31, 2026</dd>
+            <dt>Reviewer</dt><dd>Matthew Engerman, Owner</dd>
+            <dt>Date delivered</dt><dd>June 3, 2026, 10:12 ET</dd>
+            <dt>Checkpoint</dt><dd>VR-2026-05-0089</dd>
+            <dt>Memo type</dt><dd>Standard Variance &amp; Drivers</dd>
+            <dt>Status</dt><dd>Approved &mdash; Delivered</dd>
+          </dl>
 
           <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Executive summary</h3>
-          <p class="text-secondary">February revenue of $473.4K exceeded budget by $15.4K (+3.4%), driven by subscription growth that more than offset a shortfall in professional services. Total expenses exceeded budget by $14.1K (+3.3%), primarily legal costs tied to the Series B process.</p>
-          <p class="text-secondary">Operating income of $31.3K beat plan by $1.3K (+4.3%). Gross margin held at 81.1% against 81.3% budgeted &mdash; stable unit economics despite the revenue mix shifting toward lower-margin professional services in prior periods.</p>
+          <p class="text-secondary">May revenue of $1,318,000 exceeded budget by $68,000 (+5.4%), driven by new ARR bookings of $214,000 against a $180,000 plan (+19%) on two mid-market expansion deals, partially offset by approximately $9,000 of timing slippage on a delayed annual renewal that has since closed in early June. Gross profit of $962,000 was $24,000 (+2.6%) above plan, but gross margin compressed to 73.0% against 75.0% planned as cloud-hosting and data-egress costs scaled with new-logo onboarding faster than the current committed-use discount tier captured. Operating income of $95,000 came in $23,000 (19.5%) below the $118,000 plan, as sales &amp; marketing ran $46,000 over to fund the new account-executive ramp and an incremental demand-generation test. Cash closed at $4.2M with 16 months of runway against a &gt;12-month floor.</p>
+          <div class="note" style="margin-top: var(--space-4);">
+            <strong>Recommendation:</strong> The growth story is intact and bookings are accelerating; the revenue beat is real. Two items require Board attention this period &mdash; <strong>unit-cost discipline on hosting</strong>, which is a repeating exposure rather than a one-time miss, and <strong>sales efficiency</strong>, where CAC payback has drifted to 14 months against a 12-month target. We recommend authorising a move to a higher committed-use discount tier before next close, and holding incremental demand-generation spend until payback trends back under 12 months.
+          </div>
 
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Topline performance</h3>
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Performance vs plan</h3>
           <div class="table-wrap">
-            <table class="table" aria-label="Topline performance against budget">
-              <thead><tr><th>Line</th><th>Actual</th><th>Budget</th><th>Variance</th><th>Signal</th></tr></thead>
+            <table class="table memo-table" aria-label="Performance against plan, May 2026">
+              <thead><tr><th>Metric</th><th class="num">Actual</th><th class="num">Budget</th><th class="num">Variance ($)</th><th class="num">Variance (%)</th></tr></thead>
               <tbody>
-                <tr><td><strong>Total revenue</strong></td><td>$473,400</td><td>$458,000</td><td>+$15,400 (+3.4%)</td><td><span class="badge badge--green">Favorable</span></td></tr>
-                <tr><td><strong>Gross profit</strong></td><td>$383,700</td><td>$372,500</td><td>+$11,200 (+3.0%)</td><td><span class="badge badge--green">Favorable</span></td></tr>
-                <tr><td><strong>Total operating expense</strong></td><td>$352,400</td><td>$342,500</td><td>+$9,900 (+2.9%)</td><td><span class="badge badge--amber">Watch</span></td></tr>
-                <tr><td><strong>Operating income</strong></td><td>$31,300</td><td>$30,000</td><td>+$1,300 (+4.3%)</td><td><span class="badge badge--green">Favorable</span></td></tr>
+                <tr><td><strong>Total revenue</strong></td><td class="num">$1,318,000</td><td class="num">$1,250,000</td><td class="num">+$68,000</td><td class="num">+5.4%</td></tr>
+                <tr><td><strong>Cost of revenue</strong></td><td class="num">($356,000)</td><td class="num">($312,000)</td><td class="num">($44,000)</td><td class="num">(14.1%)</td></tr>
+                <tr><td><strong>Gross profit</strong></td><td class="num">$962,000</td><td class="num">$938,000</td><td class="num">+$24,000</td><td class="num">+2.6%</td></tr>
+                <tr><td><strong>Gross margin</strong></td><td class="num">73.0%</td><td class="num">75.0%</td><td class="num">(2.0 pts)</td><td class="num">n/a</td></tr>
+                <tr><td><strong>Sales &amp; marketing</strong></td><td class="num">($421,000)</td><td class="num">($375,000)</td><td class="num">($46,000)</td><td class="num">(12.3%)</td></tr>
+                <tr><td><strong>R&amp;D / product</strong></td><td class="num">($268,000)</td><td class="num">($280,000)</td><td class="num">+$12,000</td><td class="num">+4.3%</td></tr>
+                <tr><td><strong>General &amp; administrative</strong></td><td class="num">($178,000)</td><td class="num">($165,000)</td><td class="num">($13,000)</td><td class="num">(7.9%)</td></tr>
+                <tr><td><strong>Total operating expenses</strong></td><td class="num">($867,000)</td><td class="num">($820,000)</td><td class="num">($47,000)</td><td class="num">(5.7%)</td></tr>
+                <tr><td><strong>Operating income</strong></td><td class="num">$95,000</td><td class="num">$118,000</td><td class="num">($23,000)</td><td class="num">(19.5%)</td></tr>
+                <tr><td><strong>Operating margin</strong></td><td class="num">7.2%</td><td class="num">9.4%</td><td class="num">(2.2 pts)</td><td class="num">n/a</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="memo-source">Source: QuickBooks Online GL export 2026-06-03 09:41 ET &middot; Bookings detail reconciled to CRM closed-won report 2026-06-03 09:46 ET. Variances shown as Favorable / (Unfavorable) to operating income. See Audit trail below.</p>
+
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-4);">Variance drivers</h3>
+          <div class="memo-driver">
+            <p class="eyebrow">Revenue (+$68,000 favorable, +5.4%)</p>
+            <ul class="list-clean text-sm text-secondary">
+              <li>New ARR bookings of $214,000 beat the $180,000 plan (+19%), led by two mid-market expansion deals that closed in the final week of the month.</li>
+              <li>Partially offset by approximately $9,000 of timing slippage on a delayed annual renewal. That contract has since closed in early June and will land in the following period.</li>
+            </ul>
+          </div>
+          <div class="memo-driver">
+            <p class="eyebrow">Gross margin (73.0% actual vs 75.0% plan, unfavorable)</p>
+            <ul class="list-clean text-sm text-secondary">
+              <li>Cloud-hosting and data-egress costs scaled with new-logo onboarding faster than the current committed-use discount tier captured, driving cost of revenue $44,000 over plan.</li>
+              <li><strong>This is the single largest margin item this month, and it is a repeating exposure &mdash; not a one-time miss.</strong> It will recur every month at the current commitment tier until the contract is renegotiated.</li>
+            </ul>
+          </div>
+          <div class="memo-driver">
+            <p class="eyebrow">Sales &amp; marketing (($46,000) unfavorable, (12.3%))</p>
+            <ul class="list-clean text-sm text-secondary">
+              <li>Driven by onboarding the new account executive &mdash; ramp and tooling &mdash; plus an unbudgeted demand-generation test.</li>
+              <li>Pipeline created supports the spend, but CAC payback extended to approximately 14 months against a 12-month target. Worth watching before committing further incremental spend.</li>
+            </ul>
+          </div>
+          <div class="memo-driver">
+            <p class="eyebrow">R&amp;D / product (+$12,000 favorable, +4.3% &mdash; timing)</p>
+            <ul class="list-clean text-sm text-secondary">
+              <li>A contractor hire slipped from May into June. The underspend is timing-related, not a reduction in roadmap investment; expect normalisation next month.</li>
+            </ul>
+          </div>
+          <div class="memo-driver">
+            <p class="eyebrow">General &amp; administrative (($13,000) unfavorable, (7.9%))</p>
+            <ul class="list-clean text-sm text-secondary">
+              <li>Elevated by one-time legal and audit-readiness fees. Expected to return to run-rate in June; flagged for confirmation in the Q3 reforecast so the items are not carried forward in error.</li>
+            </ul>
+          </div>
+
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-2);">Cash &amp; forecast commentary</h3>
+          <p class="text-secondary">Cash position closed at $4.2M. Months of runway at current burn: 16 months, against a &gt;12-month floor &mdash; comfortably on track. Net revenue retention held at 108% versus a 105% target, and gross revenue quality is unchanged.</p>
+          <p class="text-secondary"><strong>Forward signal:</strong> bookings momentum is genuine and the pipeline supports the sales investment. The constraint on this business is not demand &mdash; it is unit economics. Both watch items this month sit on the cost side of the equation, and both are addressable within the quarter.</p>
+
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">KPI snapshot</h3>
+          <div class="table-wrap">
+            <table class="table memo-table" aria-label="KPI snapshot, May 2026">
+              <thead><tr><th>KPI</th><th class="num">May actual</th><th class="num">Target</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><strong>New ARR booked</strong></td><td class="num">$214,000</td><td class="num">$180,000</td><td><span class="badge badge--green">Above plan</span></td></tr>
+                <tr><td><strong>Net revenue retention</strong></td><td class="num">108%</td><td class="num">105%</td><td><span class="badge badge--green">Above plan</span></td></tr>
+                <tr><td><strong>Gross margin</strong></td><td class="num">73.0%</td><td class="num">75.0%</td><td><span class="badge badge--red">Below plan</span></td></tr>
+                <tr><td><strong>CAC payback</strong></td><td class="num">14 months</td><td class="num">12 months</td><td><span class="badge badge--amber">Watch</span></td></tr>
+                <tr><td><strong>Cash balance</strong></td><td class="num">$4.2M</td><td class="num">&mdash;</td><td><span class="badge badge--green">Healthy</span></td></tr>
+                <tr><td><strong>Runway</strong></td><td class="num">16 months</td><td class="num">&gt;12 months</td><td><span class="badge badge--green">On track</span></td></tr>
+                <tr><td><strong>Headcount (FTE)</strong></td><td class="num">38</td><td class="num">40</td><td><span class="badge badge--gray">2 open</span></td></tr>
               </tbody>
             </table>
           </div>
 
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Revenue variance</h3>
-          <div class="grid grid--2">
-            <div class="card" style="padding: var(--space-5);">
-              <p class="eyebrow">Subscriptions &middot; +$17,800 (+4.5%) &middot; <span class="text-green">favorable</span></p>
-              <p class="text-sm text-secondary" style="margin:0;">Subscription revenue of $413.6K exceeded the $395.8K budget by $17.8K. Twelve mid-market logos closed in late January and activated in February, and gross churn came in at 0.8% against 1.2% budgeted. Net revenue retention of 112% continues to run ahead of the 108% plan assumption.</p>
-            </div>
-            <div class="card" style="padding: var(--space-5);">
-              <p class="eyebrow">Professional services &middot; &minus;$6,500 (&minus;14.4%) &middot; watch</p>
-              <p class="text-sm text-secondary" style="margin:0;">Professional services revenue of $38.7K fell short of the $45.2K budget. Two implementations (ClientCo and Meridian) slipped on client-side resourcing, moving $4.2K of recognized revenue into March; the remaining $2.3K is a scope reduction on the Apex onboarding engagement.</p>
-            </div>
-          </div>
-
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Expense variance</h3>
-          <div class="table-wrap">
-            <table class="table" aria-label="Expense variance against budget">
-              <thead><tr><th>Line</th><th>Actual</th><th>Budget</th><th>Variance</th><th>Signal</th></tr></thead>
-              <tbody>
-                <tr><td><strong>Cost of revenue</strong></td><td>$89,700</td><td>$85,500</td><td>+$4,200 (+4.9%)</td><td><span class="badge badge--amber">Watch</span></td></tr>
-                <tr><td><strong>Total operating expense</strong></td><td>$352,400</td><td>$342,500</td><td>+$9,900 (+2.9%)</td><td><span class="badge badge--amber">Watch</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="text-sm text-secondary" style="margin-top: var(--space-3);">The cost-of-revenue overage of $4.2K is hosting cost for the new mid-market cohort. The operating-expense overage of $9.9K is $8.1K of unbudgeted Series B legal fees and $1.8K of recruiting cost for the senior engineer search. Excluding those one-time items, operating expense was on plan.</p>
-
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Headcount</h3>
-          <div class="table-wrap">
-            <table class="table" aria-label="Headcount against plan">
-              <thead><tr><th>Department</th><th>Actual FTE</th><th>Plan FTE</th><th>Variance</th><th>Note</th></tr></thead>
-              <tbody>
-                <tr><td>Engineering</td><td>14</td><td>15</td><td>&minus;1</td><td>Senior backend role in final interviews</td></tr>
-                <tr><td>Sales &amp; marketing</td><td>8</td><td>8</td><td>0</td><td>On plan</td></tr>
-                <tr><td>Customer success</td><td>5</td><td>5</td><td>0</td><td>On plan</td></tr>
-                <tr><td>G&amp;A</td><td>4</td><td>4</td><td>0</td><td>On plan</td></tr>
-                <tr><td><strong>Total</strong></td><td><strong>31</strong></td><td><strong>32</strong></td><td><strong>&minus;1</strong></td><td>Expected to fill by end of March</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Risks and watchlist</h3>
-          <div class="table-wrap">
-            <table class="table" aria-label="Risks and watchlist">
-              <thead><tr><th>Risk</th><th>Impact</th><th>Likelihood</th><th>Mitigation</th></tr></thead>
-              <tbody>
-                <tr><td>Professional services pipeline softening</td><td>$10&ndash;15K a month of revenue at risk</td><td>Medium</td><td>Pull Q2 implementation kickoffs forward; pre-sell onboarding packages with new logos</td></tr>
-                <tr><td>Hosting cost creep with the new cohort</td><td>Margin compression of 0.3&ndash;0.5 points</td><td>Medium</td><td>Infrastructure review in March; evaluate reserved-capacity commitments</td></tr>
-                <tr><td>Series B legal costs above budget</td><td>$15&ndash;25K more through close</td><td>Low</td><td>Fee cap negotiated with outside counsel; remaining work scoped</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Recommended actions</h3>
-          <ul class="list-clean text-sm">
-            <li><strong>Recover the services shortfall.</strong> Schedule Q2 implementation kickoffs for the deals now in negotiation so February's slip lands in March&ndash;April.</li>
-            <li><strong>Complete the infrastructure cost review</strong> before the next billing cycle: reserved capacity and right-sizing, to hold cost of revenue.</li>
-            <li><strong>Close the engineering hire</strong> to restore plan headcount and protect development velocity for the Q2 roadmap.</li>
-            <li><strong>Cap Series B legal exposure.</strong> Confirm a fixed-fee arrangement with outside counsel for the remaining closing work.</li>
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Risks &amp; watch items</h3>
+          <ul class="list-clean text-sm text-secondary">
+            <li><strong>Gross-margin compression.</strong> Hosting costs are scaling ahead of committed-use discounts, running 2.0 points below plan. Without action this persists and compounds as new logos onboard.</li>
+            <li><strong>CAC payback drift.</strong> The sales &amp; marketing overspend is investable only if bookings efficiency holds. Payback should be monitored monthly against the 12-month target.</li>
+            <li><strong>G&amp;A normalisation.</strong> Confirm the legal and audit-readiness fees are genuinely one-time so the Q3 reforecast does not carry them forward as run-rate.</li>
           </ul>
 
-          <div class="note" style="margin-top: var(--space-8);">
-            <strong>How this memo was checked.</strong> Built from the February general ledger export and the board-approved 2026 budget (version 2.1), with January actuals as the prior period. Every figure ties to the budget framework workbook; the workbook's built-in checks balanced before the draft was written. Reviewed and signed by Matthew Engerman, Founder, before delivery. Not bookkeeping; not an audit, review or attestation.
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Recommended actions</h3>
+          <div class="table-wrap">
+            <table class="table memo-table" aria-label="Recommended actions">
+              <thead><tr><th>Action</th><th>Owner</th><th>Target</th></tr></thead>
+              <tbody>
+                <tr><td>Right-size the cloud commitment &mdash; move to a higher committed-use discount tier</td><td><strong>VP Engineering</strong></td><td>Before next close</td></tr>
+                <tr><td>Review demand-generation ROI; hold incremental S&amp;M spend until CAC payback trends under 12 months</td><td><strong>Head of Sales</strong></td><td>Within 30 days</td></tr>
+                <tr><td>Confirm and document the one-time G&amp;A items; update the Q3 forecast accordingly</td><td><strong>Controller</strong></td><td>Q3 reforecast</td></tr>
+              </tbody>
+            </table>
           </div>
+
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Audit trail / sources</h3>
+          <div class="table-wrap">
+            <table class="table memo-table" aria-label="Audit trail and sources">
+              <thead><tr><th>Source</th><th>Pulled</th><th>Reference</th></tr></thead>
+              <tbody>
+                <tr><td><strong>QuickBooks Online &mdash; General Ledger Export (Primary)</strong></td><td>2026-06-03 09:41 ET</td><td>Hash: 7c1e5a4d&hellip;b93f</td></tr>
+                <tr><td><strong>Approved FY2026 Operating Budget</strong></td><td>2026-06-03 09:44 ET</td><td>Board-approved, rev. 2026-01-15</td></tr>
+                <tr><td><strong>CRM &mdash; Closed-Won Bookings Report</strong></td><td>2026-06-03 09:46 ET</td><td>Period 2026-05-01 &mdash; 2026-05-31</td></tr>
+                <tr><td><strong>Cloud Provider &mdash; Usage &amp; Egress Detail</strong></td><td>2026-06-03 09:52 ET</td><td>May committed-use tier analysis</td></tr>
+                <tr><td><strong>Operating Account Statement</strong></td><td>2026-06-02 EOD</td><td>May-end cash position</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="memo-source">Checkpoint reference VR-2026-05-0089 is Engerman Solutions&rsquo;s internal audit identifier for this memo. Every figure above ties to its underlying GL accounts; a full per-line audit trail with account detail and supporting transactions accompanies this memo in the variance workbook. Source materials are retained per the SaaS Online Terms &sect; Retention. Customer may request raw source attachments by emailing <a href="mailto:info@engermansolutions.com">info@engermansolutions.com</a>.</p>
+
+          <h3 style="font-size: var(--text-lg); margin: var(--space-8) 0 var(--space-3);">Workflow status</h3>
+          <div class="table-wrap">
+            <table class="table memo-table" aria-label="Workflow status">
+              <thead><tr><th>Step</th><th>Status</th><th>Timestamp</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Data validated &amp; ingested</strong></td><td><span class="badge badge--green">Complete</span></td><td>Jun 3, 09:41 ET</td></tr>
+                <tr><td><strong>Draft memo generated (AI-assisted)</strong></td><td><span class="badge badge--green">Complete</span></td><td>Jun 3, 10:12 ET</td></tr>
+                <tr><td><strong>QA review (human)</strong></td><td><span class="badge badge--green">Complete</span></td><td>Jun 3, 11:04 ET</td></tr>
+                <tr><td><strong>Customer approval &amp; delivery</strong></td><td><span class="badge badge--green">Delivered</span></td><td>Jun 3, 11:38 ET</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note" style="margin-top: var(--space-8);">
+            <strong>About this sample.</strong> This memo illustrates a typical Engerman Solutions monthly variance deliverable for a single-entity mid-market SaaS company. The company, metrics, and source citations are fictional and provided for demonstration only. A real engagement uses the customer&rsquo;s actual source systems and templates. Sample reflects the <a href="../pages/founders.html#fo-pricing">Pro plan</a> deliverable scope &mdash; variance memo, KPI snapshot, and cash &amp; forecast commentary.
+          </div>
+          <p class="memo-source" style="margin-top: var(--space-4);">Prepared by Engerman Solutions. Not financial, legal, tax, audit, or assurance advice.</p>
         </div>
       </div>
     </section>
@@ -150,7 +214,7 @@
         <div class="layers scroll-stagger">
           <div class="card layer"><p class="eyebrow">The memo</p><h3>What you just read</h3><p class="text-secondary">Actual results against the budget of record: what moved, why, the risks that matter and the recommended actions &mdash; written for the reader who signs the next check.</p></div>
           <div class="card layer"><p class="eyebrow">The summary</p><h3>Updated budget summary</h3><p class="text-secondary">Where the year now lands, month by month, with cash. One page a bank or an investor can read on its own.</p></div>
-          <div class="card layer"><p class="eyebrow">The workbook</p><h3>Your budget framework, maintained</h3><p class="text-secondary">Actuals posted to the variance tracking schedule every month; forecast, cash and scenarios kept current. It is yours, and it is the reason the memo can be trusted.</p></div>
+          <div class="card layer"><p class="eyebrow">The workbook</p><h3>Your budget framework, maintained</h3><p class="text-secondary">Actuals posted to the variance tracking schedule every month; forecast, cash and scenarios kept current, with the per-line audit trail behind every figure in the memo. It is yours, and it is the reason the memo can be trusted.</p></div>
         </div>
       </div>
     </section>
