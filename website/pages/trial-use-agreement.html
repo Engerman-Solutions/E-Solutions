@@ -40,8 +40,8 @@
     <section class="section" style="padding-top: 0;"><div class="container container--narrow">
       <div class="note" id="accept">
         <p><strong>How to accept.</strong> Read the agreement below, then click the button. It opens a short, pre-written email from your own account to <a href="mailto:info@engermansolutions.com">info@engermansolutions.com</a>; add your organization, name and title, and press Send. Your sent, timestamped email is your acceptance under the Agreement (clicking &ldquo;I Accept&rdquo; or a similar term). Prefer a signature on paper? Reply to Matthew's welcome email and he will send the PDF to sign and return.</p>
-        <p style="margin-top: var(--space-4);"><a class="btn btn--primary btn--lg" href="mailto:info@engermansolutions.com?subject=I%20accept%20the%20Trial%20Use%20Agreement%20%E2%80%94%20%5BOrganization%5D&amp;body=I%20accept%20the%20Engerman%20Solutions%20Trial%20Use%20Agreement%20(version%20of%20May%2030%2C%202026)%20on%20behalf%20of%20the%20organization%20named%20below%2C%20and%20I%20confirm%20that%20I%20am%20authorized%20to%20do%20so.%0D%0A%0D%0AOrganization%3A%20%0D%0AName%3A%20%0D%0ATitle%3A%20%0D%0AEmail%3A%20%0D%0A%0D%0AI%20understand%20that%20this%20email%2C%20with%20its%20date%20and%20time%2C%20is%20my%20electronic%20acceptance%20of%20the%20Agreement.">I accept the Trial Use Agreement</a></p>
-        <p class="text-sm text-secondary" style="margin-top: var(--space-3);">E-Solutions Consulting, LLC, doing business as Engerman Solutions, countersigns by return email the same business day. Questions before you accept: <a href="mailto:info@engermansolutions.com">info@engermansolutions.com</a>.</p>
+        <p style="margin-top: var(--space-4);"><a class="btn btn--primary btn--lg" id="tua-accept" href="mailto:info@engermansolutions.com?subject=I%20accept%20the%20Trial%20Use%20Agreement%20%E2%80%94%20%5BOrganization%5D&amp;body=I%20accept%20the%20Engerman%20Solutions%20Trial%20Use%20Agreement%20(version%20of%20May%2030%2C%202026)%20on%20behalf%20of%20the%20organization%20named%20below%2C%20and%20I%20confirm%20that%20I%20am%20authorized%20to%20do%20so.%0D%0A%0D%0AOrganization%3A%20%0D%0AName%3A%20%0D%0ATitle%3A%20%0D%0AEmail%3A%20%0D%0A%0D%0AI%20understand%20that%20this%20email%2C%20with%20its%20date%20and%20time%2C%20is%20my%20electronic%20acceptance%20of%20the%20Agreement.">I accept the Trial Use Agreement</a></p>
+        <p class="text-sm text-secondary" style="margin-top: var(--space-3);">E-Solutions Consulting, LLC, doing business as Engerman Solutions, confirms your acceptance by return email, with the agreement attached for your records and the link to your secure folder. Questions before you accept: <a href="mailto:info@engermansolutions.com">info@engermansolutions.com</a>.</p>
       </div>
     </div></section>
 
@@ -143,5 +143,17 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var ref = (p.get('ref') || '').replace(/[^\w-]/g, '').slice(0, 40);
+      var org = (p.get('org') || '').replace(/[\r\n]/g, ' ').slice(0, 120);
+      if (!ref && !org) return;
+      var subject = 'I accept the Trial Use Agreement — ' + (org || '[Organization]') + (ref ? ' (Ref ' + ref + ')' : '');
+      var body = 'I accept the Engerman Solutions Trial Use Agreement (version of May 30, 2026) on behalf of the organization named below, and I confirm that I am authorized to do so.\r\n\r\nOrganization: ' + org + '\r\nName: \r\nTitle: \r\nEmail: ' + (ref ? '\r\nReference: ' + ref : '') + '\r\n\r\nI understand that this email, with its date and time, is my electronic acceptance of the Agreement.';
+      var a = document.getElementById('tua-accept');
+      if (a) a.href = 'mailto:info@engermansolutions.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    })();
+  </script>
 </body>
 </html>
