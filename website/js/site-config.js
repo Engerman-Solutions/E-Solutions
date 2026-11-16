@@ -1,7 +1,7 @@
 // Engerman Solutions — one place for the links and endpoints the pages use.
 // Fill these in once; every page reads them. Anything left blank falls back to email so nothing on the site is a dead link.
 window.ES_CONFIG = {
-  LINKEDIN_COMPANY_URL: "",        // e.g. https://www.linkedin.com/company/engerman-solutions — fill in and the footer picks it up on every page
+  LINKEDIN_COMPANY_URL: "https://www.linkedin.com/company/engerman-solutions/",
   LINKEDIN_MATTHEW_URL: "https://www.linkedin.com/in/matthew-a-engerman-25b17a46",
   BRIEF_SUBSCRIBE_URL: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7477941237455491072",
   CALENDAR_URL: "",                // a booking link if you want one; otherwise email
