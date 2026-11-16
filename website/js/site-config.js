@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
     else { a.href = mail + "?subject=" + encodeURIComponent(a.getAttribute("data-subject") || "Engerman Solutions"); }
   });
-  // Footer "Follow" line — one source of truth, every page. Blank URLs are simply left out.
+  // Footer "Follow" line — one source of truth, every page. Order is deliberate: Matthew's profile carries the Sessions,
+  // the Brief is the newsletter, the company page comes last. Blank URLs are simply left out.
   var brand = document.querySelector(".footer__brand");
   if (brand && !brand.querySelector(".footer__follow")) {
     var items = [
-      [c.LINKEDIN_MATTHEW_URL, "Matthew on LinkedIn"],
-      [c.LINKEDIN_COMPANY_URL, "Engerman Solutions on LinkedIn"],
-      [c.BRIEF_SUBSCRIBE_URL, "The Board-Ready Brief"]
+      [c.LINKEDIN_MATTHEW_URL, "Matthew on LinkedIn — the Board-Ready Sessions"],
+      [c.BRIEF_SUBSCRIBE_URL, "The Board-Ready Brief"],
+      [c.LINKEDIN_COMPANY_URL, "Engerman Solutions on LinkedIn"]
     ].filter(function (i) { return i[0]; });
     if (items.length) {
       var p = document.createElement("p");
